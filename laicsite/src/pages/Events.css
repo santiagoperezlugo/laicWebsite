@@ -1,0 +1,125 @@
+.events-page {
+    width: 100vw;
+    min-height: 100vh; 
+    overflow-x: hidden; 
+    overflow-y: auto;   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    text-align: center;
+    margin: 0;
+    background-color:#f4d31b22;
+    padding: 2rem 1rem; 
+  
+    
+  .events-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 6rem auto 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+    
+    .events-title {
+      font-size: 2.5rem;
+      color:#184e29;
+      margin-bottom: 2rem;
+      text-align: center;
+      letter-spacing: 0em;
+    }
+    
+    .year-selector {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+    
+    .year-selector button {
+      background: white;
+      color: #184e29;
+      border: 2px solid #184e29;
+      padding: 0.5rem 1.25rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    
+    .year-selector button.active {
+      background: #184e29;
+      color: white;
+    }
+    
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      width: 100%;
+    }
+    
+    .event-card {
+      position: relative;
+      background: rgba(150, 198, 175, 0.441);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      text-align: center;
+    }
+    
+    .event-card img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      display: block;
+    }
+    
+    .status {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: 0.75rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    .status.past {
+      background: #999;
+      color: white;
+    }
+    
+    .status.upcoming {
+      background: #f4d21b;
+      color: black;
+    }
+    
+    .event-card h3 {
+      margin: 1rem 0 0.5rem;
+      color: #184e29;
+    }
+    
+    .event-card p {
+      color: #555;
+      margin-bottom: 1rem;
+    }
+    
+    @media (max-width: 480px) {
+      .year-selector {
+        flex-direction: column;
+      }
+    
+      .event-card img {
+        height: 140px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .events-page {
+        padding: 2rem;
+      }
+    }}
+  

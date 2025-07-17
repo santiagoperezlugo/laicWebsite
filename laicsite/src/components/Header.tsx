@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import {Link} from 'react-router-dom'
 
 const TABS = ['HOME', 'CLUBS', 'EVENTS', 'ARTICLES', 'RESOURCES'];
 
@@ -10,7 +11,9 @@ export default function Header() {
         <ul className="nav-list">
           {TABS.map(tab => (
             <li key={tab}>
-              <a href="#">{tab}</a>
+                <Link to={tab === 'HOME' ? '/' : `/${tab.toLowerCase()}`}>
+                {tab}
+              </Link>
             </li>
           ))}
         </ul>
