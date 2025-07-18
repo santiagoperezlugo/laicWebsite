@@ -12,7 +12,7 @@ const Events = () => {
         title: 'Field Day',
         date: "August 29th, 2024",
         status: 'past',
-        image: '/images/Field_day.jpg',
+        image: '/images/FieldDayFall24.png',
   
       },
       {
@@ -105,7 +105,7 @@ const Events = () => {
         title: "4th Year Farewell x Carne Asada",
         date: "April 26th, 2025",
         status: 'past',
-        image: '/images/Farewell24.png',
+        image: '/images/Farewell25.png',
       },
       { 
         title: "Agua Frescas & Horchata Fundraiser",
@@ -117,7 +117,7 @@ const Events = () => {
         title: "Field Day",
         date: "April 25th, 2025",
         status: 'past',
-        image: '/images/FieldDay25.png',
+        image: '/images/FieldDaySpring25.png',
       },
     ],
     '2025-2026': [
