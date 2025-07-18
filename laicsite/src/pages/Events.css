@@ -24,7 +24,7 @@
     
     .events-title {
       font-size: 2.5rem;
-      color:#184e29;
+      color:#27a227;
       margin-bottom: 2rem;
       text-align: center;
       letter-spacing: 0em;
@@ -39,8 +39,8 @@
     
     .year-selector button {
       background: white;
-      color: #184e29;
-      border: 2px solid #184e29;
+      color: #5aac5a;
+      border: 2px solid #5aac5a;
       padding: 0.5rem 1.25rem;
       border-radius: 8px;
       font-weight: bold;
@@ -49,7 +49,7 @@
     }
     
     .year-selector button.active {
-      background: #184e29;
+      background: #5aac5a;
       color: white;
     }
     

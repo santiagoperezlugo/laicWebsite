@@ -6,7 +6,7 @@
     position: fixed;    /* keeps the header pinned to the top */
     top: 0;             /* ensures the header starts at the very top */
     left: 0;
-    background: #32CD32;          /* deep navy (edit to change bar color) */
+    background: #5aac5a;          /* deep navy (edit to change bar color) */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
   }
