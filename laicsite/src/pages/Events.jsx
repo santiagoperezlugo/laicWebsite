@@ -123,7 +123,7 @@ const Events = () => {
     '2025-2026': [
       {
         title: 'Event 1.1',
-        date: "Jun 01, 2025",
+        date: "2025-06-01",
         status: 'upcoming',
         image: '/images/Event1.1.jpg',
       },
@@ -156,22 +156,25 @@ const Events = () => {
         <div className="event-grid">
           {[...events[selectedYear]]
             .sort((a, b) => new Date(b.date) - new Date(a.date))
-            .map((event, index) => (
-              <div key={index} className="event-card">
-                <img src={event.image} alt={event.title} className="event-img" />
-                <div className="event-content">
-                  <div className={`status ${event.status}`}>{event.status}</div>
-                  <h3>{event.title}</h3>
-                  <p>
-                    {new Date(event.date).toLocaleDateString("en-US", {
-                      month: "long",
-                      day: "numeric",
-                      year: "numeric",
-                    })}
-                  </p>
+            .map((event, index) => {
+              const [year, month, day] = event.date.split("-");
+              const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+              ];
+              const prettyDate = `${monthNames[parseInt(month) - 1]} ${parseInt(day)}, ${year}`;
+
+              return (
+                <div key={index} className="event-card">
+                  <img src={event.image} alt={event.title} className="event-img" />
+                  <div className="event-content">
+                    <div className={`status ${event.status}`}>{event.status}</div>
+                    <h3>{event.title}</h3>
+                    <p>{prettyDate}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
         </div>
       </div>
     </div>
