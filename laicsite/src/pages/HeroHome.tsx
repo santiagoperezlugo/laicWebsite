@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './HeroHome.css';
 
 
-const TABS = ['HOME', 'EVENTS', 'EXEC', 'CLUBS','ARTICLES', 'RESOURCES'];
+const TABS = ['EVENTS', 'EXEC', 'CLUBS', 'RESOURCES'];
 
 export default function HeroHome() {
   return (

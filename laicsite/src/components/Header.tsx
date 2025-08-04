@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import {Link} from 'react-router-dom'
 
-const TABS = ['HOME', 'CLUBS', 'EVENTS', 'ARTICLES', 'RESOURCES'];
+const TABS = ['HOME', 'EVENTS', 'EXEC', 'CLUBS', 'RESOURCES'];
 
 export default function Header() {
   return (
