@@ -87,14 +87,18 @@
       text-transform: uppercase;
     }
     
-    .status.past {
+    .status.PAST {
       background: #999;
       color: white;
     }
     
-    .status.upcoming {
+    .status.UPCOMING {
       background: #f4d21b;
       color: black;
+    }
+    .status.TODAY {
+      background-color: rgba(59, 247, 112, 0.787);
+      color: white;
     }
     
     .event-card h3 {
