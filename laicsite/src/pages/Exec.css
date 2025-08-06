@@ -1,0 +1,83 @@
+.exec-page {
+    width: 100vw;
+    min-height: 100vh; 
+    overflow-x: hidden; 
+    overflow-y: auto;   
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    text-align: center;
+    margin: 0;
+    background-color: #f4d31b22;
+    padding: 2rem 1rem; 
+  }
+  
+  .exec-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 6rem auto 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .exec-title {
+    font-size: 2.5rem;
+    color: #27a227;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .exec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
+  }
+  
+  .exec-card {
+    position: relative;
+    background: rgba(150, 198, 175, 0.441);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  .exec-img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .exec-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #184e29;
+  }
+  
+  .exec-role {
+    font-weight: bold;
+    color: #5aac5a;
+    margin-bottom: 0.5rem;
+  }
+  
+  .exec-bio {
+    font-size: 0.9rem;
+    color: #555;
+    padding: 0 1rem;
+  }
+  
+  @media (max-width: 480px) {
+    .exec-card img {
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .exec-page {
+      padding: 2rem;
+    }
+  }
+  
