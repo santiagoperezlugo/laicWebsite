@@ -1,5 +1,5 @@
 import React from "react";
-import "./Exec.css"; 
+import "./About.css"; 
 import Header from '../components/Header';
 
 const execs = [

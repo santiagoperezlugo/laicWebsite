@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1000;
   background: linear-gradient(
     130deg,
@@ -11,17 +11,17 @@
     #f4d21b,
     #1d2951
   );
-  background-size: 500% 500%;
+  background-size: 400% 400%;
   animation: gradientShift 10s ease-in-out infinite;
 }
 
-/* Center the header content horizontally */
 .header-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1.5rem 3rem;
-  width: 100%;
 }
 
 .header-nav {

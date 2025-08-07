@@ -1,10 +1,9 @@
-// HeroHome.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeroHome.css';
 
 
-const TABS = ['EVENTS', 'EXEC', 'CLUBS', 'RESOURCES'];
+const TABS = ['ABOUT', 'EVENTS', 'CLUBS', 'RESOURCES', 'CONTACT'];
 
 export default function HeroHome() {
   return (
