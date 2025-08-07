@@ -1,23 +1,22 @@
-import React from 'react';
-import './Header.css';
-import {Link} from 'react-router-dom'
 
-const TABS = ['HOME', 'EVENTS', 'EXEC', 'CLUBS', 'RESOURCES'];
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
+
+const TABS = ['HOME', 'EVENTS', 'EXEC', 'CLUBS', 'ARTICLES', 'RESOURCES'];
 
 export default function Header() {
   return (
     <header className="header">
-      <nav>
-        <ul className="nav-list">
+      <div className="header-content">
+        <nav className="header-nav">
           {TABS.map(tab => (
-            <li key={tab}>
-                <Link to={tab === 'HOME' ? '/' : `/${tab.toLowerCase()}`}>
-                {tab}
-              </Link>
-            </li>
+            <Link key={tab} to={`/${tab.toLowerCase()}`} className="header-link">
+              {tab}
+            </Link>
           ))}
-        </ul>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 }
