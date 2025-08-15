@@ -1,0 +1,59 @@
+.exec-swiper__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.exec-swiper {
+  width: 100%;
+  max-width: 900px; /* controls total carousel width */
+}
+
+/* Each slide width smaller than container so next/prev peek */
+.exec-swiper .swiper-slide {
+  width: clamp(260px, 70vw, 360px);
+}
+
+/* Card style */
+.exec-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #0f0f0f;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+}
+
+.exec-card__media {
+  flex: 1 1 auto;
+  background: #222;
+}
+.exec-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.exec-card__body {
+  padding: 14px;
+  text-align: center;
+}
+
+.exec-card__name {
+  margin: 0;
+  font-size: 1.15rem;
+}
+.exec-card__role {
+  margin: 4px 0;
+  color: #c9c9c9;
+  font-size: 0.95rem;
+}
+.exec-card__bio {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #e5e5e5;
+}
