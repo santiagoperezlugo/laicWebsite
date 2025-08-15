@@ -57,3 +57,59 @@
   font-size: 0.9rem;
   color: #e5e5e5;
 }
+
+/* Details list: evenly spaced rows */
+.exec-card__details {
+  margin: 12px auto 0; /* center the block */
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* stack rows */
+  row-gap: 10px; /* even spacing between rows */
+  width: min(640px, 92%); /* equal left/right space inside card */
+}
+.exec-card__detail {
+  display: grid;
+  grid-template-columns: 130px 1fr; /* fixed label column, flexible value column */
+  align-items: center;
+  column-gap: 12px;
+}
+.exec-card__detail-label {
+  font-weight: 800; /* bold */
+  color: #ffffff; /* white */
+  text-align: right; /* align headers to the right */
+}
+.exec-card__detail-label::after {
+  content: ':'; /* add colon to every header */
+  margin-left: 4px;
+}
+.exec-card__detail-value {
+  margin: 0;
+  color: #ffffff; /* white text for values as well for consistency */
+  opacity: 0.9;
+  text-align: left; /* answers to the right of headers */
+  word-break: break-word;
+}
+
+/* Stack Why LAIC? value under its label */
+.exec-card__detail--stack {
+  grid-template-columns: 1fr !important; /* single column for this row */
+  justify-items: center; /* center both label and value */
+}
+.exec-card__detail--stack .exec-card__detail-label {
+  text-align: center; /* center the header */
+}
+.exec-card__detail--stack .exec-card__detail-value {
+  margin-top: 4px;
+  text-align: center; /* center the paragraph under the header */
+}
+.exec-card__detail--stack .exec-card__detail-label::after {
+  content: ''; /* remove colon for Why LAIC? only */
+  margin: 0;
+}
+
+/* Responsive: on small cards, let label wrap and keep spacing tight */
+@media (max-width: 360px) {
+  .exec-card__detail {
+  grid-template-columns: 110px 1fr;
+  }
+}

@@ -20,7 +20,29 @@ function ExecCard({ person }) {
       <div className="exec-card__body">
         <h3 className="exec-card__name">{person.name}</h3>
         <p className="exec-card__role">{person.role}</p>
-        {person.bio && <p className="exec-card__bio">{person.bio}</p>}
+        {/* Detail sections */}
+        <dl className="exec-card__details">
+          {[{
+            key: 'hometown', label: 'Hometown', value: person.hometown,
+          }, {
+            key: 'major', label: 'Major', value: person.major,
+          }, {
+            key: 'ethnicity', label: 'Ethnicity', value: person.ethnicity,
+          }, {
+            key: 'funFact', label: 'Fun fact', value: person.funFact,
+          }, {
+            key: 'whyLaic', label: 'Why LAIC?', value: person.whyLaic,
+          }].map((row) => (
+            <div
+              className={`exec-card__detail ${row.key === 'whyLaic' ? 'exec-card__detail--stack' : ''}`}
+              key={row.key}
+            >
+              <dt className="exec-card__detail-label">{row.label}</dt>
+              <dd className="exec-card__detail-value">{row.value || '—'}</dd>
+            </div>
+          ))}
+        </dl>
+  {/* Bio removed per request */}
       </div>
     </article>
   );
