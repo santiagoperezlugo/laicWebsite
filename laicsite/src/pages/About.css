@@ -1,51 +1,141 @@
-/* Page layout: full-width and horizontally centered across the screen */
 .about-page {
   width: 100%;
   min-height: 100svh;
   box-sizing: border-box;
 
-  /* Space for fixed header so content isn't hidden under it */
   padding: 96px 16px 48px;
 
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers all child sections horizontally */
+  align-items: center;
   gap: 12px;
 
-  /* Inherit site colors; don't force new background or colors */
+  position: relative;
+  overflow: hidden;
   color: inherit;
-  background: transparent;
+  background: #144238; 
 }
 
-/* Hero/title area */
+@media (prefers-color-scheme: light) {
+  .about-page {
+  background: #144238; 
+  }
+}
+
+.about-page::before,
+.about-page::after {
+  content: none;
+}
+
+.about-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+}
+
 .about-hero {
   width: 100%;
   display: flex;
-  justify-content: center; /* center horizontally across the screen */
+  justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .about-title {
   margin: 0;
-  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
   font-weight: 800;
   letter-spacing: 0.02em;
-  color: inherit; /* use your app color scheme */
+  color: inherit;
 }
 
-/* Exec swiper section */
 .about-exec {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* keep all content centered horizontally */
+  align-items: center;
   gap: 8px;
   text-align: center;
 }
 
-/* Container just centers the swiper and lets it define its own max-width */
 .exec-swiper-container {
   width: 100%;
   display: flex;
-  justify-content: center; /* centers the swiper itself */
+  justify-content: center;
+}
+
+.about-section {
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  margin: 4px auto 8px;
+}
+
+.section-title {
+  margin: 8px 0 0;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  font-weight: 800;
+}
+
+.about-mission .section-title {
+  text-transform: uppercase;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+.section-lead {
+  margin: 0;
+  font-size: clamp(0.95rem, 2.2vw, 1.05rem);
+  color: #dcdcdc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.feature-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.feature-card {
+  background: #0f0f0f;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.feature-card h3 {
+  margin: 6px 0 4px;
+  font-size: 1rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: #cfcfcf;
+  font-size: 0.9rem;
+}
+
+.feature-emoji {
+  font-size: 1.4rem;
+}
+
+@media (max-width: 900px) {
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
 }

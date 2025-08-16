@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
 
@@ -9,6 +9,7 @@ import 'swiper/css/pagination';
 import './ExecCardSwiper.css';
 
 function ExecCard({ person }) {
+  const [isWhyExpanded, setIsWhyExpanded] = useState(false);
   return (
     <article className="exec-card">
       <div className="exec-card__media">
@@ -38,7 +39,27 @@ function ExecCard({ person }) {
               key={row.key}
             >
               <dt className="exec-card__detail-label">{row.label}</dt>
-              <dd className="exec-card__detail-value">{row.value || '—'}</dd>
+              {row.key === 'whyLaic' ? (
+                <>
+                  <dd
+                    className={`exec-card__detail-value ${isWhyExpanded ? 'is-expanded' : 'is-collapsed'}`}
+                  >
+                    {row.value || '—'}
+                  </dd>
+                  {row.value && row.value.length > 0 && (
+                    <button
+                      type="button"
+                      className="exec-card__toggle"
+                      onClick={() => setIsWhyExpanded((v) => !v)}
+                      aria-expanded={isWhyExpanded}
+                    >
+                      {isWhyExpanded ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                </>
+              ) : (
+                <dd className="exec-card__detail-value">{row.value || '—'}</dd>
+              )}
             </div>
           ))}
         </dl>
@@ -57,6 +78,7 @@ export default function ExecCardSwiper({ people = [] }) {
         centeredSlides
         slidesPerView="auto"
         spaceBetween={16}
+  loop
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
