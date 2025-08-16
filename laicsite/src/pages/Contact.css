@@ -1,0 +1,136 @@
+:root {
+  --brand-navy: #1d2951;
+  --brand-green: #184e29;
+  --brand-yellow: #f4d21b;
+  --card-bg: rgba(255,255,255,0.08);
+  --card-border: rgba(255,255,255,0.15);
+  --accent: var(--brand-yellow);
+}
+
+.contact-page {
+  min-height: 100vh;
+  background: #144238; /* match About.css tone */
+}
+
+.contact-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 140px 24px 64px; /* extra space under fixed header */
+}
+
+.contact-hero {
+  text-align: center;
+  margin-bottom: 36px;
+  animation: fadeSlide 700ms ease-out;
+}
+
+.contact-title {
+  font-size: clamp(28px, 4vw, 48px);
+  line-height: 1.1;
+  margin: 0 0 28px 0; /* add more space before subtitle */
+}
+
+.contact-tag {
+  color: #9aa3b2;
+  font-size: clamp(14px, 1.8vw, 18px);
+  margin: 0 auto;
+}
+
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 24px;
+  margin-top: 24px;
+  margin-bottom: 56px; /* extra space before bottom text */
+}
+
+.contact-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 16px;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* perfect square */
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+  transform: translateY(0);
+  transition: transform 240ms ease, box-shadow 240ms ease, border-color 240ms ease, background 240ms ease;
+  box-shadow: none;
+}
+
+.contact-card .icon {
+  width: 300px;
+  height: 300px;
+  display: grid;
+  place-items: center;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 300ms ease;
+}
+
+.contact-card .icon img,
+.contact-card .icon svg {
+  width: 200px;
+  height: 200px;
+  color: currentColor; /* SVGs inherit platform color */
+}
+
+.contact-card .text p {
+  margin: 0;
+  color: #e7ecf5;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+/* Shine sweep */
+/* remove shine since container is invisible by default */
+
+/* Platform accents and icon colors */
+.contact-card.instagram { --accent: #E4405F; }
+.contact-card.linkedin { --accent: #0A66C2; }
+.contact-card.email { --accent: var(--brand-green); }
+
+.contact-card.instagram .icon { color: #E4405F; }
+.contact-card.linkedin .icon { color: #0A66C2; }
+.contact-card.email .icon { color: var(--brand-green); }
+
+.contact-card:hover {
+  transform: none; /* keep container still; highlight icon instead */
+  border-color: transparent;
+  box-shadow: none;
+}
+.contact-card:hover .icon {
+  transform: scale(1.06) rotate(-2deg);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 35%, transparent);
+}
+/* no shine on hover */
+
+/* Magnetic hover glow following the cursor */
+.contact-cards .contact-card {
+  --mx: -20%;
+  --my: 50%;
+}
+
+/* Keyframes */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer */
+.contact-footer {
+  text-align: center;
+  margin-top: 26px;
+  color: #9aa3b2;
+}
