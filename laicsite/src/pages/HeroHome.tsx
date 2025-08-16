@@ -15,6 +15,9 @@ export default function HeroHome() {
           className="hero-logo"
         />
         <h1 className="hero-subtitle">LATIN AMERICAN IDENTITIES COALITION</h1>
+        <p className="hero-tagline">
+          Celebrating Latinx identities at UVA and beyond
+        </p>
         <nav className="hero-nav">
           {TABS.map(tab => (
             <Link key={tab} to={`/${tab.toLowerCase()}`} className="hero-link">
