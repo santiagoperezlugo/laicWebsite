@@ -31,7 +31,7 @@ export default function Contact() {
             Connect with us @:
           </h1>
           <p className="contact-tag">
-            We love meeting new people. Slide into our DMs, say hi on LinkedIn, or drop us an email!
+            We love meeting new people! Slide into our DMs, say hi on LinkedIn, or drop us an email.
           </p>
         </section>
 
