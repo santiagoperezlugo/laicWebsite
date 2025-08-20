@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './About.css';
 import ExecCardSwiper from '../components/ExecCardSwiper';
 import Header from '../components/Header';
 
 const execs = [
-  // Co-Presidents (alphabetical by name)
   {
     name: 'Steven Santos',
     role: 'Co-President',
@@ -29,7 +28,6 @@ const execs = [
       'LAIC has helped me grow and connect with people passionate about uplifting the Latinx community at UVA. It’s comforting to be around those who share your culture and values. Thank you LAIC for creating a safe space to proudly celebrate our Latinx identities!',
   },
 
-  // Vice President
   {
     name: 'Nicole Checker',
     role: 'Vice President',
@@ -42,7 +40,6 @@ const execs = [
       'I joined LAIC to be part of a community that celebrates Latinx culture and creates a space where we can feel seen, supported, and proud of who we are.',
   },
 
-  // Secretary
   {
     name: 'Angeline Damian',
     role: 'Secretary',
@@ -55,7 +52,6 @@ const execs = [
       'LAIC helped me find a space to connect with students who share similar life experiences and cultural backgrounds. Now I want to pay that forward so others can find the same community, friendship, and support.',
   },
 
-  // Treasurers (alphabetical)
   {
     name: 'Agustin Hansen-Vik',
     role: 'Treasurer',
@@ -73,7 +69,6 @@ const execs = [
     image: '/images/exec/cynthia.jpeg',
   },
 
-  // Public Relations (alphabetical)
   {
     name: 'Esther Casco',
     role: 'Public Relations',
@@ -97,7 +92,6 @@ const execs = [
       'Going into college can be scary, and the people you meet make all the difference. I joined LAIC to help incoming students find community and belonging while representing their Latin roots.',
   },
 
-  // Historian
   {
     name: 'Epi Francisco',
     role: 'Historian',
@@ -109,7 +103,6 @@ const execs = [
     whyLaic: 'LAIC is a home away from home',
   },
 
-  // Event Coordinators (alphabetical)
   {
     name: 'Adrian Celaya',
     role: 'Event Cordinator',
@@ -179,54 +172,116 @@ const execs = [
 ];
 
 export default function About() {
+  useEffect(() => {
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const toReveal = Array.from(document.querySelectorAll('.reveal'));
+
+    if (prefersReduced) {
+      toReveal.forEach((el) => el.classList.add('in-view'));
+      return;
+    }
+
+    const obs = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            obs.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.18, rootMargin: '0px 0px -8% 0px' }
+    );
+
+    toReveal.forEach((el) => obs.observe(el));
+    return () => obs.disconnect();
+  }, []);
   return (
     <>
       <Header />
       <main className="about-page">
-        {/* Mission */}
-        <section className="about-mission about-section">
-          <h2 className="section-title">Our Mission</h2>
-          <p className="section-lead">
-            Where Latinx leaders grow, connect, and uplift. Celebrating Latinx identities at UVA and beyond.
-          </p>
+        <section className="about-mission about-section reveal">
+          <h2 className="divider-kicker about-hero-kicker">Belong. Celebrate. Lead.</h2>
         </section>
 
-        <section className="about-hero">
+        <section className="about-intro theme-navy reveal">
+          <div className="intro-media reveal">
+            <img
+              src="/images/community/picnic.JPEG"
+              alt="LAIC community picnic on the Lawn"
+              loading="lazy"
+              className="intro-image reveal"
+            />
+          </div>
+          <div className="intro-copy reveal">
+            <h2 className="section-title mission-title unified-title">Our Mission</h2>
+            <p className="mission-text">
+              Where Latinx leaders grow, connect, and uplift. Celebrating Latinx identities at UVA and beyond.
+            </p>
+          </div>
+        </section>
+
+  <section className="about-divider theme-blue reveal" aria-labelledby="about-divider-title">
+          <h2 id="about-divider-title" className="divider-kicker unified-title">What We Do</h2>
+          <p className="divider-lead">We bring people together—through community, culture, leadership, and service.</p>
+          <ul className="what-list" aria-label="LAIC programs and focus areas">
+            <li className="what-item reveal">
+              <h3>Community & Social</h3>
+              <p>GBMs, socials, and mixers that make Grounds feel like home.</p>
+            </li>
+            <li className="what-item reveal">
+              <h3>Culture & Celebration</h3>
+              <p>Heritage events that honor and uplift Latinx identities.</p>
+            </li>
+            <li className="what-item reveal">
+              <h3>Leadership & Growth</h3>
+              <p>Opportunities to lead, learn, and serve on and off Grounds.</p>
+            </li>
+            <li className="what-item reveal">
+              <h3>Service & Advocacy</h3>
+              <p>Building solidarity and giving back to the wider community.</p>
+            </li>
+          </ul>
+        </section>
+
+        <section className="about-intro reverse theme-green reveal">
+          <div className="intro-media reveal">
+            <img
+              src="/images/community/sports.JPEG"
+              alt="LAIC intramurals and community activities"
+              loading="lazy"
+              className="intro-image reveal"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = '/images/Volleyball_24.png';
+              }}
+            />
+          </div>
+          <div className="intro-copy reveal">
+            <h2 className="section-title unified-title">Join Our Familia</h2>
+            <p>
+              LAIC is a welcoming home for Latinx students at UVA—a place to find friends, celebrate culture,
+              and build community that lasts beyond Grounds. Through socials, heritage events, and leadership
+              opportunities, we create supportive spaces where everyone feels seen, valued, and empowered to grow.
+            </p>
+            <ul className="intro-badges" aria-label="Our pillars">
+              <li>Community</li>
+              <li>Culture</li>
+              <li>Leadership</li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="about-hero reveal">
           <h1 className="about-title">Meet our Executive Board</h1>
         </section>
 
-        <section className="about-exec">
-          <div className="exec-swiper-container">
+        <section className="about-exec reveal">
+          <div className="exec-swiper-container reveal">
             <ExecCardSwiper people={execs} />
           </div>
         </section>
         
-        {/* What we do / value-add under Exec */}
-        <section className="about-programs about-section">
-          <h2 className="section-title">What We Do</h2>
-          <div className="feature-grid">
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🤝</div>
-              <h3>Community & Social</h3>
-              <p>GBMs, socials, and mixers that make Grounds feel like home.</p>
-            </article>
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🎉</div>
-              <h3>Culture & Celebration</h3>
-              <p>Heritage events that honor and uplift Latinx identities.</p>
-            </article>
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🚀</div>
-              <h3>Leadership & Growth</h3>
-              <p>Opportunities to lead, learn, and serve on and off Grounds.</p>
-            </article>
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🧡</div>
-              <h3>Service & Advocacy</h3>
-              <p>Building solidarity and giving back to the wider community.</p>
-            </article>
-          </div>
-        </section>
       </main>
     </>
   );

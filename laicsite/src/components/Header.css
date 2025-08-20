@@ -6,10 +6,10 @@
   z-index: 1000;
   background: linear-gradient(
     130deg,
-    #1d2951,
     #184e29,
-    #f4d21b,
-    #1d2951
+    #0e1328,
+    #184e29,
+    #0e1328
   );
   background-size: 400% 400%;
   animation: gradientShift 10s ease-in-out infinite;
@@ -47,7 +47,7 @@
   bottom: -2px;
   width: 100%;
   height: 2px;
-  background: #f4d21b;
+  background: #60a5fa;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.25s ease-out;

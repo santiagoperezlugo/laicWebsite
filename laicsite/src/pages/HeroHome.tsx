@@ -16,7 +16,7 @@ export default function HeroHome() {
         />
         <h1 className="hero-subtitle">LATIN AMERICAN IDENTITIES COALITION</h1>
         <p className="hero-tagline">
-          Celebrating Latinx identities at UVA and beyond
+          "Celebrating Latinx identities at UVA and beyond"
         </p>
         <nav className="hero-nav">
           {TABS.map(tab => (
