@@ -185,10 +185,82 @@ export default function About() {
       <main className="about-page">
         {/* Mission */}
         <section className="about-mission about-section">
-          <h2 className="section-title">Our Mission</h2>
-          <p className="section-lead">
-            Where Latinx leaders grow, connect, and uplift. Celebrating Latinx identities at UVA and beyond.
-          </p>
+          <h2 className="divider-kicker">Belong. Celebrate. Lead.</h2>
+        </section>
+
+        {/* Image left, copy right */}
+        <section className="about-intro theme-navy">
+          <div className="intro-media">
+            <img
+              src="/images/community/picnic.JPEG"
+              alt="LAIC community picnic on the Lawn"
+              loading="lazy"
+              className="intro-image"
+            />
+          </div>
+          <div className="intro-copy">
+            <h2 className="section-title mission-title">OUR MISSION</h2>
+            <p className="mission-text">
+              Where Latinx leaders grow, connect, and uplift. Celebrating Latinx identities at UVA and beyond.
+            </p>
+          </div>
+        </section>
+
+        {/* Big center statement between sections */}
+        <section className="about-divider theme-yellow" aria-labelledby="about-divider-title">
+          <h2 id="about-divider-title" className="divider-kicker">What We Do</h2>
+          <p className="divider-lead">We bring people together—through community, culture, leadership, and service.</p>
+          <ul className="what-list" aria-label="LAIC programs and focus areas">
+            <li className="what-item">
+              <h3>Community & Social</h3>
+              <p>GBMs, socials, and mixers that make Grounds feel like home.</p>
+            </li>
+            <li className="what-item">
+              <h3>Culture & Celebration</h3>
+              <p>Heritage events that honor and uplift Latinx identities.</p>
+            </li>
+            <li className="what-item">
+              <h3>Leadership & Growth</h3>
+              <p>Opportunities to lead, learn, and serve on and off Grounds.</p>
+            </li>
+            <li className="what-item">
+              <h3>Service & Advocacy</h3>
+              <p>Building solidarity and giving back to the wider community.</p>
+            </li>
+          </ul>
+        </section>
+
+        {/* Sports / activities highlight */}
+        <section className="about-intro reverse theme-green">
+          <div className="intro-media">
+            <img
+              src="/images/community/sports.JPEG"
+              alt="LAIC intramurals and community activities"
+              loading="lazy"
+              className="intro-image"
+              onError={(e) => {
+                e.currentTarget.onerror = null;
+                e.currentTarget.src = '/images/Volleyball_24.png';
+              }}
+            />
+          </div>
+          <div className="intro-copy">
+            <h2 className="section-title">About Us</h2>
+            <p>
+              LAIC is a welcoming home for Latinx students at UVA—a place to find friends, celebrate culture,
+              and build community that lasts beyond Grounds. Through socials, heritage events, and leadership
+              opportunities, we create supportive spaces where everyone feels seen, valued, and empowered to grow.
+            </p>
+            <p>
+              We show up for each other—whether that’s cheering on the court, sharing a meal, tutoring for exams,
+              or planning events that bring the wider UVA community together.
+            </p>
+            <ul className="intro-badges" aria-label="Our pillars">
+              <li>Community</li>
+              <li>Culture</li>
+              <li>Leadership</li>
+            </ul>
+          </div>
         </section>
 
         <section className="about-hero">
@@ -201,32 +273,7 @@ export default function About() {
           </div>
         </section>
         
-        {/* What we do / value-add under Exec */}
-        <section className="about-programs about-section">
-          <h2 className="section-title">What We Do</h2>
-          <div className="feature-grid">
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🤝</div>
-              <h3>Community & Social</h3>
-              <p>GBMs, socials, and mixers that make Grounds feel like home.</p>
-            </article>
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🎉</div>
-              <h3>Culture & Celebration</h3>
-              <p>Heritage events that honor and uplift Latinx identities.</p>
-            </article>
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🚀</div>
-              <h3>Leadership & Growth</h3>
-              <p>Opportunities to lead, learn, and serve on and off Grounds.</p>
-            </article>
-            <article className="feature-card">
-              <div className="feature-emoji" aria-hidden>🧡</div>
-              <h3>Service & Advocacy</h3>
-              <p>Building solidarity and giving back to the wider community.</p>
-            </article>
-          </div>
-        </section>
+  {/* What we do section moved above; removed cards */}
       </main>
     </>
   );
