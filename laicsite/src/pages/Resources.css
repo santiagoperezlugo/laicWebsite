@@ -109,7 +109,6 @@
 .kyr-links { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
 .kyr-links a { color: #f4d21b; text-decoration: underline; }
 
-/* Card grid */
 .resources-grid {
   margin-top: 1rem;
   display: grid;

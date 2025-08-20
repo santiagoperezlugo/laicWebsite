@@ -17,7 +17,6 @@ type ResourceItem = {
 };
 
 const RESOURCES: ResourceItem[] = [
-  // UVA-focused
   {
     id: 'mss',
     name: 'UVA Multicultural Student Services',
@@ -55,7 +54,6 @@ const RESOURCES: ResourceItem[] = [
     url: 'https://studentlegal.virginia.edu/',
   },
 
-  // Local Charlottesville
   {
     id: 'lajc',
     name: 'Legal Aid Justice Center (LAJC) — Immigration Justice',
@@ -93,7 +91,6 @@ const RESOURCES: ResourceItem[] = [
     url: 'https://internationalneighbors.org/',
   },
 
-  // Legal/ICE resources
   {
     id: 'aclu-kyr',
     name: 'ACLU — Know Your Rights (Immigrants)',
@@ -131,7 +128,6 @@ const RESOURCES: ResourceItem[] = [
     url: 'https://immigrationequality.org/',
   },
 
-  // Health & Wellness
   {
     id: '988-es',
     name: '988 Lifeline — Español',
@@ -153,7 +149,6 @@ const RESOURCES: ResourceItem[] = [
     phone: '1-800-799-7233',
   },
 
-  // Scholarships & Careers
   {
     id: 'latinx-scholarships',
     name: 'Scholarships for Latine Students (curated list)',

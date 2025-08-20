@@ -8,8 +8,8 @@ export default function Contact() {
     const handleMove = (e: MouseEvent) => {
       const el = e.currentTarget as HTMLElement;
       const rect = el.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100; // 0-100
-      const y = ((e.clientY - rect.top) / rect.height) * 100; // 0-100
+  const x = ((e.clientX - rect.left) / rect.width) * 100;
+  const y = ((e.clientY - rect.top) / rect.height) * 100;
       el.style.setProperty('--mx', `${x}%`);
       el.style.setProperty('--my', `${y}%`);
     };
@@ -40,28 +40,24 @@ export default function Contact() {
             href="https://instagram.com/uvlaic"
             target="_blank"
             rel="noreferrer"
-            className="contact-card instagram"
+              className="contact-card instagram"
+              aria-label="Instagram"
           >
-            <div className="icon" aria-hidden>
-              <img src="/images/icons/instagram.svg" alt="" />
-            </div>
+            <div className="icon" role="img" aria-label="Instagram" />
           </a>
 
           <a
             href="https://www.linkedin.com/company/latin-american-identities-coalition-laic"
             target="_blank"
             rel="noreferrer"
-            className="contact-card linkedin"
+              className="contact-card linkedin"
+              aria-label="LinkedIn"
           >
-            <div className="icon" aria-hidden>
-              <img src="/images/icons/linkedin.svg" alt="" />
-            </div>
+            <div className="icon" role="img" aria-label="LinkedIn" />
           </a>
 
-          <a href="mailto:email@placeholder.com" className="contact-card email">
-            <div className="icon" aria-hidden>
-              <img src="/images/icons/email.svg" alt="" />
-            </div>
+            <a href="mailto:email@placeholder.com" className="contact-card email" aria-label="Email">
+            <div className="icon" role="img" aria-label="Email" />
           </a>
         </section>
 

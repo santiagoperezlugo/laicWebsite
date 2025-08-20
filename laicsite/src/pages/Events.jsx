@@ -136,7 +136,7 @@ const Events = () => {
   
   return (
     <div className="events-page">
-      <Header /> {}
+  <Header />
 
       <div className="events-wrapper">
         <h1 className="events-title">Events</h1>
