@@ -137,14 +137,12 @@
   color: #d6d6d6;
 }
 
-/* Unify intro section headings with "What We Do" heading type */
 .about-intro .section-title.unified-title {
   font-size: clamp(1.6rem, 4.5vw, 2.2rem);
   font-weight: 900;
   letter-spacing: 0.01em;
 }
 
-/* Make Our Mission body text match What We Do lead type */
 .mission-text {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.7;
