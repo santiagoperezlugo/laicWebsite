@@ -11,21 +11,26 @@ const Events = () => {
       {
         title: 'Field Day!',
         date: "2025-08-26",
-        image: '/images/Fielddayfall25.png',
+        image: '/images/FieldDay25.png',
         description: ''
       },
       {
-        title: 'Field Day!',
-        date: "2025-08-26",
-        image: '/images/Fielddayfall25.png',
+        title: 'Feliz Friday!',
+        date: "2025-08-29",
+        image: '/images/Feliz_Friday25.png',
+        description: ''
+      },
+      {
+        title: 'Pickleball Mixer!',
+        date: "2025-08-31",
+        image: '/images/PickleBall.png',
         description: ''
       }
-      
     ],
     '2024-2025': [
       {
         title: 'Field Day',
-        date: "2024-08-29",
+        date: "2024-08-31",
         image: '/images/FieldDayFall24.png',
         description: ''
       },
