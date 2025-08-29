@@ -15,7 +15,7 @@ const LINKS: ContactLink[] = [
     id: 'groupme',
     href:'https://groupme.com/join_group/99299204/lXOjv00i',
     label: 'GroupMe',
-    className: 'Groupme',
+  className: 'groupme',
     aria: 'GroupMe'
   },
   {
@@ -31,13 +31,6 @@ const LINKS: ContactLink[] = [
     label: 'LinkedIn',
     className: 'linkedin',
     aria: 'LinkedIn'
-  },
-  {
-    id: 'email',
-    href: 'mailto:email@placeholder.com',
-    label: 'Email',
-    className: 'email',
-    aria: 'Email'
   }
 ];
 

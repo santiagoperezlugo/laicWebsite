@@ -60,12 +60,11 @@
 }
 
 .contact-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, max-content));
-  justify-content: center;
-  justify-items: center;
-  align-items: center;
+  display: flex;
   gap: 36px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   margin-top: 24px;
   margin-bottom: 64px;
 }
@@ -132,14 +131,16 @@
   --accent: var(--brand-ig);
   --icon-url: url('/images/icons/instagram.svg');
 }
+.contact-card.groupme {
+  --accent: #00aff0;
+  --icon-url: url('/images/icons/groupme_icon.png');
+  --icon-scale: .85;
+}
 .contact-card.linkedin {
   --accent: var(--brand-li);
   --icon-url: url('/images/icons/linkedin.svg');
 }
-.contact-card.email {
-  --accent: var(--brand-mail);
-  --icon-url: url('/images/icons/email.svg');
-}
+/* Email card removed */
 
 .contact-card:hover {
   transform: translateY(-4px) scale(1.02);
@@ -152,7 +153,7 @@
 
 /* dynamic tilt using CSS custom properties */
 .contact-card { transform-style: preserve-3d; }
-.contact-card .icon { transform: rotateX(var(--tiltX)) rotateY(var(--tiltY)); }
+.contact-card .icon { transform: rotateX(var(--tiltX)) rotateY(var(--tiltY)) scale(var(--icon-scale,1)); }
 
 /* Card label overlay */
 .contact-card .card-label {
@@ -182,6 +183,8 @@
 .contact-card.in-view { animation: popIn .9s cubic-bezier(.16,.77,.3,1) forwards; }
 .contact-card[data-index="1"].in-view { animation-delay: .12s; }
 .contact-card[data-index="2"].in-view { animation-delay: .24s; }
+/* Adjust animation delays now that there are only 3 cards total (indexes 0-2) */
+.contact-card[data-index="3"].in-view { animation-delay: .36s; }
 
 @keyframes popIn {
   0% { opacity: 0; transform: translateY(18px) scale(.92); filter: blur(4px); }
