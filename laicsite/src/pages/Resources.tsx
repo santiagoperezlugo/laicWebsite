@@ -28,21 +28,12 @@ const RESOURCES: ResourceItem[] = [
   },
   {
     id: 'shpe-uva',
-    name: 'SHPE at UVA (Society of Hispanic Professional Engineers)',
+    name: 'Society of Hispanic Professional Engineers (SHPE)',
     description:
-      'Professional development, mentorship, and a strong community for Hispanic engineers at UVA.',
+      'Professional development, mentorship, and a strong community for Hispanic engineers.',
     category: 'UVA',
     tags: ['engineering', 'career', 'mentorship'],
-    url: 'https://www.shpe.org/chapters',
-  },
-  {
-    id: 'lsa-uva',
-    name: 'Latinx Student Alliance (LSA) — UVA',
-    description:
-      'Student-led organization fostering Latine culture, advocacy, and events on Grounds.',
-    category: 'UVA',
-    tags: ['culture', 'advocacy', 'student org'],
-    url: 'https://atuva.student.virginia.edu/organizations',
+    url: 'https://shpe.org/about-shpe/',
   },
   {
     id: 'student-legal-services',
@@ -51,7 +42,7 @@ const RESOURCES: ResourceItem[] = [
       'Low-cost legal consultations for eligible UVA students on a range of matters (not a replacement for immigration counsel).',
     category: 'UVA',
     tags: ['legal', 'consultation'],
-    url: 'https://studentlegal.virginia.edu/',
+    url: 'https://sls.virginia.edu/',
   },
 
   {
@@ -130,7 +121,7 @@ const RESOURCES: ResourceItem[] = [
 
   {
     id: '988-es',
-    name: '988 Lifeline — Español',
+    name: '988 Lifeline',
     description:
       '24/7 free and confidential support for people in distress. Marca 988 y presiona 2 para Español.',
     category: 'Health & Wellness',
@@ -140,23 +131,23 @@ const RESOURCES: ResourceItem[] = [
   },
   {
     id: 'ndvh',
-    name: 'National Domestic Violence Hotline — Español',
+    name: 'National Domestic Violence Hotline',
     description:
-      'Soporte 24/7. Llama al 1−800−799−SAFE (7233) o envía “START” al 88788. Servicios en Español disponibles.',
+      '24/7 Support. Call 1−800−799−SAFE (7233) or text “START” to 88788. Services en Español available.',
     category: 'Health & Wellness',
     tags: ['safety', 'hotline', 'spanish'],
-    url: 'https://www.thehotline.org/es/',
+    url: 'https://988lifeline.org/',
     phone: '1-800-799-7233',
   },
 
   {
-    id: 'latinx-scholarships',
-    name: 'Scholarships for Latine Students (curated list)',
+    id: 'scholar-shpe',
+    name: 'ScholarSHPE',
     description:
-      'External scholarship directories and funds for Hispanic/Latine students. Verify deadlines each term.',
+      'With over 1,500 scholarships awarded since 2018 totaling over $6,000,000, SHPE is actively narrowing the gap in the Hispanic STEM education pipeline. Apply Now!',
     category: 'Scholarships & Careers',
     tags: ['funding', 'aid'],
-    url: 'https://www.hsf.net/scholarship',
+    url: 'https://shpe.org/engage/programs/scholarshpe/',
   },
   {
     id: 'hsf',

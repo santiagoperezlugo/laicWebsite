@@ -68,3 +68,38 @@
       gap: 0.75rem;
   }
 }
+
+@media (max-width: 640px) {
+  .header-content {
+    padding: 0.5rem 0.75rem;
+  }
+  .header-nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: clamp(0.35rem, 2vw, 0.7rem);
+    justify-content: space-between;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .header-link {
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: clamp(0.55rem, 3.2vw, 0.78rem);
+    letter-spacing: 0.035em;
+    padding: 0.25rem 0;
+    line-height: 1.1;
+  }
+}
+
+@media (max-width: 360px) {
+  .header-content { padding: 0.4rem 0.5rem; }
+  .header-link {
+    font-size: clamp(0.5rem, 3.6vw, 0.65rem);
+    letter-spacing: 0.025em;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-nav { transform: scale(0.92); transform-origin: left center; }
+  .header-content { padding-right: 0.25rem; }
+}

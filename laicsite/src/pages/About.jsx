@@ -216,7 +216,7 @@ export default function About() {
           <div className="intro-copy reveal">
             <h2 className="section-title mission-title unified-title">Our Mission</h2>
             <p className="mission-text">
-              Where Latinx leaders grow, connect, and uplift. Celebrating Latinx identities at UVA and beyond.
+            To empower and uplift Latinx students at UVA by organizing events for the Latin American community on Grounds, fostering a safe and collaborative space for organizations and students to share updates and make collective decisions, and serving as a liaison between the community, University administration, alumni, faculty, and peers.
             </p>
           </div>
         </section>
@@ -264,11 +264,20 @@ export default function About() {
               and build community that lasts beyond Grounds. Through socials, heritage events, and leadership
               opportunities, we create supportive spaces where everyone feels seen, valued, and empowered to grow.
             </p>
-            <ul className="intro-badges" aria-label="Our pillars">
-              <li>Community</li>
-              <li>Culture</li>
-              <li>Leadership</li>
-            </ul>
+            <a
+              href="https://groupme.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="qr-placeholder-link"
+              aria-label="Join our GroupMe"
+            >
+              <img
+                src="/images/icons/groupme.png"
+                alt="Join us on GroupMe – scan or tap"
+                className="qr-image"
+                loading="lazy"
+              />
+            </a>
           </div>
         </section>
 
