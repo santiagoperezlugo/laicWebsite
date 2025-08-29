@@ -15,14 +15,14 @@
   color: #ffffff;
   background:
     radial-gradient(120% 80% at 50% -10%, rgba(45,110,203,0.10) 0%, rgba(45,110,203,0) 60%),
-    linear-gradient(180deg, #0e1328 0%, #0d1328 100%);
+    linear-gradient(180deg, #297b46 0%, #0d9b37 100%);
 }
 
 @media (prefers-color-scheme: light) {
   .about-page {
   background:
     radial-gradient(120% 80% at 50% -10%, rgba(45,110,203,0.08) 0%, rgba(45,110,203,0) 60%),
-    linear-gradient(180deg, #0e1328 0%, #0d1328 100%);
+    linear-gradient(180deg, #f4d31b22 0%, #137108d1 100%);
   }
 }
 
@@ -99,14 +99,14 @@
 }
 
 .theme-navy::before {
-  background: radial-gradient(120% 100% at 50% 0%, rgba(13,19,40,0.28) 0%, rgba(13,19,40,0.14) 35%, rgba(13,19,40,0.06) 60%, rgba(13,19,40,0) 85%);
+  background: radial-gradient(120% 100% at 50% 0%, rgba(59, 177, 77, 0.36) 0%, rgba(65, 195, 74, 0.887) 35%, rgb(76, 143, 35) 60%, rgba(16, 91, 50, 0.974) 85%);
 }
 .theme-green::before {
-  background: radial-gradient(120% 100% at 50% 0%, rgba(24,78,41,0.26) 0%, rgba(24,78,41,0.12) 35%, rgba(24,78,41,0.05) 60%, rgba(24,78,41,0) 85%);
+  background: radial-gradient(120% 100% at 50% 0%, rgba(16,91,50,0.974) 0%, rgba(33, 162, 74, 0.958) 35%, rgba(36, 138, 68, 0.856) 60%, rgba(46, 145, 77, 0.807) 85%);
 }
 .theme-blue::before,
 .about-divider::before {
-  background: radial-gradient(120% 100% at 50% 0%, rgba(45,110,203,0.26) 0%, rgba(45,110,203,0.12) 35%, rgba(45,110,203,0.05) 60%, rgba(45,110,203,0) 85%);
+  background: radial-gradient(120% 100% at 50% 0%, rgba(62, 157, 25, 0.786) 0%, rgba(11, 169, 56, 0.57) 35%, rgba(22, 118, 18, 0.769) 60%, rgba(22, 110, 44, 0.826) 85%);
 }
 
 .intro-media {
@@ -186,7 +186,7 @@
 }
 
 .intro-point {
-  background: #0f0f0f;
+  background: #4deb62df;
   border: 1px solid rgba(255,255,255,0.08);
   border-radius: 12px;
   padding: 10px 12px;
@@ -285,7 +285,7 @@
 }
 
 .feature-card {
-  background: #0f0f0f;
+  background: #3db355;
   border: 1px solid rgba(255,255,255,0.06);
   border-radius: 12px;
   padding: 14px;
@@ -299,7 +299,7 @@
 
 .feature-card p {
   margin: 0;
-  color: #cfcfcf;
+  color: #3b5d1d;
   font-size: 0.9rem;
 }
 
@@ -368,7 +368,7 @@
 }
 .divider-chips span {
   padding: 8px 12px;
-  background: rgba(0,0,0,0.24);
+  background: rgba(76, 177, 122, 0.981);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 999px;
   font-weight: 700;

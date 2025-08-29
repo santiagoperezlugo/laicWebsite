@@ -8,7 +8,7 @@
 .exec-swiper {
   width: 100%;
   max-width: 1000px;
-  --swiper-navigation-color: #ffffff;
+  --swiper-navigation-color: #64c259;
   --swiper-pagination-color: #ffffff;
 }
 
@@ -23,8 +23,8 @@
   height: 100%;
   border-radius: 12px;
   overflow: hidden;
-  background: #0f0f0f;
-  color: #fff;
+  background: #efe883e2;
+  color: #669d32;
   box-shadow: 0 8px 20px rgba(0,0,0,0.25);
   display: flex;
   flex-direction: column;
@@ -33,7 +33,7 @@
 
 .exec-card__media {
   flex: 0 0 auto;
-  background: #222;
+  background: #0a5526;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
@@ -70,7 +70,7 @@
 }
 .exec-card__role {
   margin: 4px 0;
-  color: #c9c9c9;
+  color: #10470d;
   font-size: 0.85rem;
   white-space: nowrap;
   overflow: hidden;
@@ -79,7 +79,7 @@
 .exec-card__bio {
   margin-top: 6px;
   font-size: 0.9rem;
-  color: #e5e5e5;
+  color: #0a6718f5;
 }
 
 .exec-card__details {
@@ -99,7 +99,7 @@
 }
 .exec-card__detail-label {
   font-weight: 800;
-  color: #ffffff;
+  color: #0a6718f5;
   text-align: right;
   font-size: 0.85rem;
 }
@@ -109,7 +109,7 @@
 }
 .exec-card__detail-value {
   margin: 0;
-  color: #ffffff;
+  color: #0b310fe1;
   opacity: 0.9;
   text-align: left;
   word-break: break-word;
@@ -146,7 +146,7 @@
   margin-top: 6px;
   background: transparent;
   border: none;
-  color: #a3d3ff;
+  color: #0a6718f5;;
   font-size: 0.8rem;
   cursor: pointer;
 }

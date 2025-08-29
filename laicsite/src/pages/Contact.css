@@ -12,8 +12,9 @@
 
 .contact-page {
   min-height: 100vh;
-  background: radial-gradient(1200px 600px at 50% -100px, #0f1e2b 0%, #0a1815 55%, #06110e 100%);
-  background-color: #06110e;
+  background:
+    radial-gradient(120% 80% at 50% -10%, rgba(45,110,203,0.10) 0%, rgba(45,110,203,0) 60%),
+    linear-gradient(180deg, #f4d31b22 0%, #1371089f 100%);
 }
 
 .background-orb {

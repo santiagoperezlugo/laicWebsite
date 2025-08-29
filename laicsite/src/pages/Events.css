@@ -8,7 +8,10 @@
     align-items: flex-start; 
     text-align: center;
     margin: 0;
-    background-color:#f4d31b22;
+    background:
+    radial-gradient(120% 80% at 50% -10%, rgba(45,110,203,0.10) 0%, rgba(45,110,203,0) 60%),
+    linear-gradient(180deg, #f4d31b22 0%, #137108d1 100%);
+    color: #ffffff;
     padding: 2rem 1rem; 
   
     
