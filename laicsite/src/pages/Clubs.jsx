@@ -4,47 +4,61 @@ import Header from '../components/Header';
 
 const clubs = [
   {
-    id: 'laic',
-    name: 'Latin American Identities Coalition',
-    image: '/images/image.png',
-    description: 'Umbrella organization uplifting Latinx orgs & voices across UVA through culture, community, and advocacy.',
-    instagram: 'https://instagram.com/uvafm_laic'
+    id: 'claro',
+    name: 'Cultural Latinx Advancement for Resources & Opportunities',
+    image: '/images/clubs/claro.jpg',
+    description: 'Cultural Latinx Advancement for Resources & Opportunities @ the University of Virginia 💙',
+    instagram: 'https://www.instagram.com/claroatuva/'
   },
   {
-    id: 'dance',
-    name: 'Baile Social Club',
-    image: '/images/Baile_Social.png',
-    description: 'Sharing Latin dance, movement, and music while building confidence and community on & off the floor.',
-    instagram: 'https://instagram.com/'
+    id: 'bln',
+    name: 'Batten Latinx Network',
+    image: '/images/clubs/bln.png',
+    description: 'Creating a community of future policymaking Latinx students that will support one another in their academic, social, and professional pursuits.',
+    instagram: 'https://www.instagram.com/uva_bln/'
   },
   {
-    id: 'heritage',
-    name: 'Heritage Dinner Committee',
-    image: '/images/Heritage_Dinner.png',
-    description: 'Annual celebration planning team spotlighting the diversity of Latin American cultures through food & performance.',
-    instagram: 'https://instagram.com/'
+    id: 'shpe',
+    name: 'Society of Hispanic Professional Engineers',
+    image: '/images/clubs/shpe.jpg',
+    description: 'Society of Hispanic Professional Engineers UVA Chapter Established in 2000',
+    instagram: 'https://www.instagram.com/shpe_uva/'
   },
   {
-    id: 'copa',
-    name: 'Copa Latine',
-    image: '/images/Copa_24.png',
-    description: 'Our signature fútbol tournament bringing students together in friendly competition and cultural pride.',
-    instagram: 'https://instagram.com/'
+    id: 'plumas',
+    name: 'Political Latinxs United for Movement & Action in Society',
+    image: '/images/clubs/plumas.jpg',
+    description: 'Political Latinxs United for Movement & Action in Society is a radical group aimed towards community, justice & liberation at all fronts.',
+    instagram: 'https://www.instagram.com/plumasatuva/'
   },
   {
-    id: 'merienda',
-    name: 'Merienda on the Lawn',
-    image: '/images/Merienda_24.png',
-    description: 'Student-led pop up sharing cafecito, pan dulce, and conversation in iconic UVA spaces.',
-    instagram: 'https://instagram.com/'
+    id: 'lli',
+    name: 'Latin Leadership Insititute',
+    image: '/images/clubs/lli.png',
+    description: 'The Latinx Leadership Institute is a student-led, and cohort-based leadership development program for 1st, 2nd, and 3rd Year Latinx emerging leaders.',
+    instagram: 'https://www.instagram.com/lliatuva/'
   },
   {
-    id: 'jeopardy',
-    name: 'Music Jeopardy Night',
-    image: '/images/Jeopardy24.png',
+    id: 'pmp',
+    name: ' Peer Mentoring Program',
+    image: '/images/clubs/pmp.png',
     description: 'Interactive Latin music trivia experience mixing fun, learning, and friendly competition.',
-    instagram: 'https://instagram.com/'
+    instagram: 'https://www.instagram.com/pmpuva/'
   },
+  {
+    id: 'fuego',
+    name: 'Fuego',
+    image: '/images/clubs/fuego.jpg',
+    description: 'We are Fuego Dance Team @ UVA that celebrates Latin American culture',
+    instagram: 'https://www.instagram.com/fuegodanceteam/'
+  },
+  {
+    id: 'lmsa',
+    name: 'Latino Medical Student Association',
+    image: '/images/clubs/lmsa.png',
+    description: 'The Latino Medical Student Association at the University of Virginia School of Medicine',
+    instagram: 'https://www.instagram.com/uvalmsa/'
+  }
 ];
 
 export default function Clubs() {
