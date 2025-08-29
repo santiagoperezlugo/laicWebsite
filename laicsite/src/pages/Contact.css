@@ -16,6 +16,25 @@
   background-color: #06110e;
 }
 
+.background-orb {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at var(--ox,60%) var(--oy,40%), rgba(244,210,27,0.10), transparent 55%),
+    radial-gradient(circle at calc(var(--ox,60%) + 20%) calc(var(--oy,40%) + 25%), rgba(14,143,93,0.12), transparent 60%);
+  mix-blend-mode: plus-lighter;
+  animation: orbShift 12s ease-in-out infinite alternate;
+  opacity: .8;
+  z-index: 0;
+}
+
+@keyframes orbShift {
+  0% { --ox: 35%; --oy: 38%; filter: hue-rotate(0deg) saturate(140%); }
+  50% { --ox: 55%; --oy: 46%; filter: hue-rotate(25deg) saturate(160%); }
+  100% { --ox: 70%; --oy: 40%; filter: hue-rotate(50deg) saturate(140%); }
+}
+
 .contact-main {
   max-width: 1100px;
   margin: 0 auto;
@@ -66,8 +85,11 @@
   overflow: hidden;
   isolation: isolate;
   transform: translateY(0);
-  transition: transform 240ms ease;
-  box-shadow: none;
+  transition: transform 360ms cubic-bezier(.34,.9,.4,1), filter 400ms ease, box-shadow 400ms ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+  --tiltX: 0deg;
+  --tiltY: 0deg;
+  perspective: 1000px;
 }
 
 .contact-card .icon {
@@ -78,7 +100,7 @@
   border-radius: 0;
   background: transparent;
   border: none;
-  transition: transform 300ms ease;
+  transition: transform 600ms cubic-bezier(.16,.67,.3,1), filter 600ms ease;
 }
 
 .contact-card .icon {
@@ -92,6 +114,8 @@
   background: var(--accent, #fff);
   -webkit-mask: var(--icon-url) center/contain no-repeat;
   mask: var(--icon-url) center/contain no-repeat;
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,.3));
+  transition: transform 600ms cubic-bezier(.16,.67,.3,1), filter 600ms ease;
 }
 .contact-card .icon img,
 .contact-card .icon svg { display: none; }
@@ -118,11 +142,52 @@
 }
 
 .contact-card:hover {
-  transform: none;
-  box-shadow: none;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 40px -10px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,0.06) inset;
 }
-.contact-card:hover .icon {
-  transform: scale(1.06) rotate(-2deg);
+.contact-card:hover .icon::before {
+  transform: scale(1.08) rotate(-3deg);
+  filter: drop-shadow(0 10px 22px rgba(0,0,0,.55)) brightness(1.15);
+}
+
+/* dynamic tilt using CSS custom properties */
+.contact-card { transform-style: preserve-3d; }
+.contact-card .icon { transform: rotateX(var(--tiltX)) rotateY(var(--tiltY)); }
+
+/* Card label overlay */
+.contact-card .card-label {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%) translateY(12px);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  color: #ffffffd9;
+  padding: 4px 12px 6px;
+  background: linear-gradient(120deg, rgba(0,0,0,.55), rgba(35,35,35,.35));
+  backdrop-filter: blur(6px) saturate(140%);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  box-shadow: 0 4px 12px -2px rgba(0,0,0,.45);
+  opacity: 0;
+  transition: opacity 500ms ease, transform 500ms ease;
+  pointer-events: none;
+}
+.contact-card:hover .card-label { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* Reveal animation sequence */
+.contact-card { opacity: 0; transform: translateY(18px) scale(.92); }
+.contact-card.in-view { animation: popIn .9s cubic-bezier(.16,.77,.3,1) forwards; }
+.contact-card[data-index="1"].in-view { animation-delay: .12s; }
+.contact-card[data-index="2"].in-view { animation-delay: .24s; }
+
+@keyframes popIn {
+  0% { opacity: 0; transform: translateY(18px) scale(.92); filter: blur(4px); }
+  40% { opacity: 1; }
+  70% { transform: translateY(-4px) scale(1.02); }
+  100% { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
 }
 
 .contact-cards .contact-card {
@@ -141,6 +206,9 @@
   color: #9aa3b2;
 }
 
+/* Focus styles for accessibility */
+.contact-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 8px; }
+
 @media (max-width: 768px) {
   .contact-main {
     padding: 120px 20px 56px;
@@ -157,6 +225,7 @@
   width: 100%;
   height: 100%;
   }
+  .contact-card .card-label { font-size: 14px; bottom: 10px; }
 }
 
 @media (max-width: 480px) {
@@ -176,4 +245,11 @@
   width: 100%;
   height: 100%;
   }
+  .contact-card .card-label { font-size: 13px; bottom: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-orb { animation: none; }
+  .contact-card, .contact-card.in-view { animation: none; transform: none !important; opacity: 1 !important; }
+  .contact-card .icon, .contact-card .icon::before, .contact-card .card-label { transition: none !important; }
 }
