@@ -4,119 +4,132 @@ import Header from '../components/Header';
 
 
 const Events = () => {
-  const [selectedYear, setSelectedYear] = useState('2024-2025');
+  const [selectedYear, setSelectedYear] = useState('2025-2026');
 
   const events = {
+    '2025-2026': [
+      {
+        title: 'Field Day!',
+        date: "2025-08-26",
+        image: '/images/Fielddayfall25.png',
+        description: ''
+      },
+      {
+        title: 'Field Day!',
+        date: "2025-08-26",
+        image: '/images/Fielddayfall25.png',
+        description: ''
+      }
+      
+    ],
     '2024-2025': [
       {
         title: 'Field Day',
         date: "2024-08-29",
         image: '/images/FieldDayFall24.png',
-  
+        description: ''
       },
       {
         title: 'Feliz Friday',
         date: "2024-08-30",
         image: '/images/Feliz_Friday.jpg',
+        description: ''
       },
       {
         title: "S'more night",
         date: "2024-09-05",
         image: '/images/Smores_Night.jpg',
+        description: ''
       },
       {
         title: "LAIC GBM #1",
         date: "2024-09-06",
         image: '/images/GBM_1_24.png',
-
+        description: ''
       },
       { 
         title: "Volleyball Tournament",
         date: "2024-09-21",
         image: '/images/Volleyball_24.png',
+        description: ''
       },
       { 
         title: "Baile Social",
         date: "2024-10-03",
         image: '/images/Baile_Social.png',
+        description: ''
       },
       { 
         title: "Hispanic Heritage Month Dinner",
         date: "2024-10-21",
         image: '/images/Heritage_Dinner.png',
+        description: ''
       },
       { 
         title: "Merienda on the Lawn",
         date: "2024-10-21",
         image: '/images/Merienda_24.png',
+        description: ''
       },
       { 
         title: "Latinx Ball",
         date: "2024-11-16",
         image: '/images/LatinxBall_24.png',
+        description: ''
       },
-    
      { 
         title: "Copa Latine",
         date: "2024-11-09",
         image: '/images/Copa_24.png',
+        description: ''
       },
       { 
         title: "Pie an Exec",
         date: "2024-11-08",
         image: '/images/Pie.png',
+        description: ''
       },
       { 
         title: "Día de los Muertos Pop Up",
         date: "2024-11-08",
         image: '/images/DiaDeLosM.png',
+        description: ''
       },
       { 
         title: "General Body Meeting Friendly Speed Dating",
         date: "2025-02-06",
         image: '/images/SpeedDating.png',
+        description: ''
       },
       { 
         title: "Music Jeopardy Night",
         date: "2025-03-31",
         image: '/images/Jeopardy24.png',
+        description: ''
       },
       { 
         title: "Tote Bag & Bracelet Making",
         date: "2025-04-15",
         image: '/images/ToteBag24.png',
+        description: ''
       },
       { 
         title: "4th Year Farewell x Carne Asada",
         date: "2025-04-26",
         image: '/images/Farewell25.png',
+        description: ''
       },
       { 
         title: "Agua Frescas & Horchata Fundraiser",
         date: "2025-04-14",
         image: '/images/Agua.png',
+        description: ''
       },
       { 
         title: "Field Day",
         date: "2025-04-25",
         image: '/images/FieldDaySpring25.png',
-      },
-    ],
-    '2025-2026': [
-      {
-        title: 'Event 1.1',
-        date: "2025-06-01",
-        image: '/images/Event1.1.jpg',
-      },
-      {
-        title: 'Event 1.1',
-        date: "2025-06-01",
-        image: '/images/Event1.1.jpg',
-      },
-      {
-        title: 'Event 1.1',
-        date: "2025-08-04",
-        image: '/images/Event1.1.jpg',
+        description: ''
       },
     ],
   };
@@ -143,16 +156,16 @@ const Events = () => {
 
         <div className="year-selector">
           <button
-            onClick={() => setSelectedYear('2024-2025')}
-            className={selectedYear === '2024-2025' ? 'active' : ''}
-          >
-            2024-2025
-          </button>
-          <button
             onClick={() => setSelectedYear('2025-2026')}
             className={selectedYear === '2025-2026' ? 'active' : ''}
           >
             2025-2026
+          </button>
+          <button
+            onClick={() => setSelectedYear('2024-2025')}
+            className={selectedYear === '2024-2025' ? 'active' : ''}
+          >
+            2024-2025
           </button>
         </div>
 
@@ -176,6 +189,7 @@ const Events = () => {
                     </div>
                     <h3>{event.title}</h3>
                     <p>{prettyDate}</p>
+                    {event.description && <p className="event-desc">{event.description}</p>}
                   </div>
                 </div>
               );
