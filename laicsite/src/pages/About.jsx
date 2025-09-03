@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './About.css';
 import ExecCardSwiper from '../components/ExecCardSwiper';
 import Header from '../components/Header';
@@ -12,7 +12,7 @@ const execs = [
     major: 'Economics',
     ethnicity: 'Honduran & German',
     funFact:
-      'I was feet from an 18-foot gator',
+      'I was feet away from an 18-foot gator',
     whyLaic:
       'I joined LAIC looking for a community that felt like home—people who understand my background, culture, and the little things that make being Latinx special. LAIC gave me that and more: friendships, pride in my identity, and a space to grow and give back.',
   },
@@ -150,7 +150,7 @@ const execs = [
   {
     name: 'Santiago Perez',
     role: 'Event Cordinator',
-    image: '/images/exec/santi.jpeg',
+    image: '/images/exec/santi.jpg',
     hometown: 'Arlington, VA',
     major: 'Computer Science',
     ethnicity: 'Mexican',
@@ -172,6 +172,54 @@ const execs = [
 ];
 
 export default function About() {
+  const communityImages = [
+  { src: '/images/community/picnic.JPEG', alt: 'LAIC community picnic on the Lawn' },
+  { src: '/images/community/bracelets.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/cute_field.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/food.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/girl_tugOW.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/hug.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/lsc_full.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/pie.jpg', alt: 'LAIC community pie social' },
+  { src: '/images/community/sports.JPEG', alt: 'LAIC intramurals and community activities' },
+  { src: '/images/community/trio.jpg', alt: 'LAIC community event photo' },
+  ];
+
+  const [current, setCurrent] = useState(0);
+  const [isAnimating, setIsAnimating] = useState(false);
+  // Lock the frame to the picnic image's aspect ratio so images don't change size
+  const [aspectRatio, setAspectRatio] = useState(1.5); // default 3:2
+  const hasLockedRatio = useRef(false);
+  const touchStartX = useRef(null);
+  const touchDeltaX = useRef(0);
+
+  const next = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrent((c) => (c + 1) % communityImages.length);
+  };
+
+  const prev = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+    setCurrent((c) => (c - 1 + communityImages.length) % communityImages.length);
+  };
+
+  useEffect(() => {
+    const t = setTimeout(() => setIsAnimating(false), 220);
+    return () => clearTimeout(t);
+  }, [current]);
+
+  // keyboard support (left/right)
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'ArrowRight') next();
+      if (e.key === 'ArrowLeft') prev();
+    };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  });
+
   useEffect(() => {
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const toReveal = Array.from(document.querySelectorAll('.reveal'));
@@ -200,26 +248,140 @@ export default function About() {
     <>
       <Header />
       <main className="about-page">
-        <section className="about-mission about-section reveal">
-          <h2 className="divider-kicker about-hero-kicker">Belong. Celebrate. Lead.</h2>
+        <section className="about-section reveal" style={{ textAlign: 'center' }}>
+          <h2
+            className="section-title mission-title unified-title"
+            style={{ color: '#146c43', textTransform: 'uppercase', letterSpacing: '0.06em', fontSize: 'clamp(2rem, 6vw, 3rem)' }}
+          >
+            Our Mission
+          </h2>
+          <p className="mission-text" style={{ maxWidth: '72ch', margin: '8px auto 0', color: '#0f5132' }}>
+            To empower and uplift Latinx students at UVA by organizing events for the Latin American community on Grounds, fostering a safe and collaborative space for organizations and students to share updates and make collective decisions, and serving as a liaison between the community, University administration, alumni, faculty, and peers.
+          </p>
         </section>
 
-        <section className="about-intro theme-navy reveal">
-          <div className="intro-media reveal">
+        <section className="about-intro theme-navy reveal" style={{ gridTemplateColumns: '1fr', justifyItems: 'center' }}>
+          <div
+            className="intro-media reveal"
+            style={{
+              position: 'relative',
+              overflow: 'hidden',
+              // Lock height relative to width using aspect ratio so slides don't jump
+              aspectRatio: aspectRatio,
+              width: '92%',
+              maxWidth: '900px',
+              margin: '0 auto'
+            }}
+            onTouchStart={(e) => {
+              touchStartX.current = e.touches[0].clientX;
+              touchDeltaX.current = 0;
+            }}
+            onTouchMove={(e) => {
+              if (touchStartX.current == null) return;
+              touchDeltaX.current = e.touches[0].clientX - touchStartX.current;
+            }}
+            onTouchEnd={() => {
+              const threshold = 40; // swipe threshold in px
+              if (touchDeltaX.current > threshold) {
+                prev();
+              } else if (touchDeltaX.current < -threshold) {
+                next();
+              }
+              touchStartX.current = null;
+              touchDeltaX.current = 0;
+            }}
+            aria-roledescription="carousel"
+            aria-label="Community photos"
+          >
+            <button
+              type="button"
+              onClick={prev}
+              aria-label="Previous image"
+              onMouseDown={(e) => e.preventDefault()} // avoid focus ring on mouse click, keep for keyboard
+              style={{
+                position: 'absolute',
+                left: 8,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 2,
+                background: 'transparent',
+                color: '#fff',
+                border: 'none',
+                padding: 0,
+                width: 'auto',
+                height: 'auto',
+                cursor: 'pointer',
+                outline: 'none',
+                WebkitTapHighlightColor: 'transparent',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <span style={{ fontSize: 48, fontWeight: 900, lineHeight: 1, textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}>‹</span>
+            </button>
+
             <img
-              src="/images/community/picnic.JPEG"
-              alt="LAIC community picnic on the Lawn"
+              key={communityImages[current].src}
+              src={communityImages[current].src}
+              alt={communityImages[current].alt}
               loading="lazy"
               className="intro-image reveal"
+              style={{
+                width: '100%',
+                height: '100%',
+                display: 'block',
+                objectFit: 'cover',
+                transition: 'opacity 200ms ease',
+                opacity: isAnimating ? 0.85 : 1
+              }}
+              onError={(e) => {
+                // If a format isn't supported (e.g., HEIC), skip to next image
+                e.currentTarget.onerror = null;
+                next();
+              }}
+              onLoad={(e) => {
+                // Lock ratio once based on the picnic image so slides keep same size
+                if (!hasLockedRatio.current && current === 0) {
+                  const w = e.currentTarget.naturalWidth || 3;
+                  const h = e.currentTarget.naturalHeight || 2;
+                  if (w > 0 && h > 0) {
+                    setAspectRatio(w / h);
+                    hasLockedRatio.current = true;
+                  }
+                }
+              }}
             />
+
+            <button
+              type="button"
+              onClick={next}
+              aria-label="Next image"
+              onMouseDown={(e) => e.preventDefault()} // avoid focus ring on mouse click, keep for keyboard
+              style={{
+                position: 'absolute',
+                right: 8,
+                top: '50%',
+                transform: 'translateY(-50%)',
+                zIndex: 2,
+                background: 'transparent',
+                color: '#fff',
+                border: 'none',
+                padding: 0,
+                width: 'auto',
+                height: 'auto',
+                cursor: 'pointer',
+                outline: 'none',
+                WebkitTapHighlightColor: 'transparent',
+                WebkitAppearance: 'none',
+                MozAppearance: 'none',
+                userSelect: 'none'
+              }}
+            >
+              <span style={{ fontSize: 48, fontWeight: 900, lineHeight: 1, textShadow: '0 2px 6px rgba(0,0,0,0.6)' }}>›</span>
+            </button>
           </div>
-          <div className="intro-copy reveal">
-            <h2 className="section-title mission-title unified-title">Our Mission</h2>
-            <p className="mission-text">
-            To empower and uplift Latinx students at UVA by organizing events for the Latin American community on Grounds, fostering a safe and collaborative space for organizations and students to share updates and make collective decisions, and serving as a liaison between the community, University administration, alumni, faculty, and peers.
-            </p>
-          </div>
-        </section>
+  </section>
 
   <section className="about-divider theme-blue reveal" aria-labelledby="about-divider-title">
           <h2 id="about-divider-title" className="divider-kicker unified-title">What We Do</h2>
@@ -258,7 +420,7 @@ export default function About() {
             />
           </div>
           <div className="intro-copy reveal">
-            <h2 className="section-title unified-title">Join Our Familia</h2>
+            <h2 className="section-title unified-title">Join Our Community</h2>
             <p>
               LAIC is a welcoming home for Latinx students at UVA—a place to find friends, celebrate culture,
               and build community that lasts beyond Grounds. Through socials, heritage events, and leadership
