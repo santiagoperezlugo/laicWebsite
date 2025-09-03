@@ -249,13 +249,8 @@ export default function About() {
       <Header />
       <main className="about-page">
         <section className="about-section reveal" style={{ textAlign: 'center' }}>
-          <h2
-            className="section-title mission-title unified-title"
-            style={{ color: '#146c43', textTransform: 'uppercase', letterSpacing: '0.06em', fontSize: 'clamp(2rem, 6vw, 3rem)' }}
-          >
-            Our Mission
-          </h2>
-          <p className="mission-text" style={{ maxWidth: '72ch', margin: '8px auto 0', color: '#0f5132' }}>
+          <h2 className="section-title mission-title unified-title">OUR MISSION</h2>
+          <p className="mission-text" style={{ maxWidth: '72ch', margin: '8px auto 0' }}>
             To empower and uplift Latinx students at UVA by organizing events for the Latin American community on Grounds, fostering a safe and collaborative space for organizations and students to share updates and make collective decisions, and serving as a liaison between the community, University administration, alumni, faculty, and peers.
           </p>
         </section>
