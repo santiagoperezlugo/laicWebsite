@@ -14,7 +14,7 @@
   font-size: clamp(2.2rem, 6.5vw, 3.4rem);
   line-height: 1.05;
   font-weight: 900;
-  color: #0b5d35;
+  color: #ffffff;
   font-family: Impact, Haettenschweiler, 'Arial Black', 'Segoe UI Black', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
   text-shadow: 0 2px 8px rgba(0,0,0,0.22);
   position: relative;
@@ -30,7 +30,7 @@
   border-radius: 999px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
-.clubs-tag { margin: 0 auto; max-width: 640px; font-size: clamp(1rem,2.1vw,1.2rem); line-height: 1.55; color: #0b3d24; }
+.clubs-tag { margin: 0 auto; max-width: 640px; font-size: clamp(1rem,2.1vw,1.2rem); line-height: 1.55; color: inherit; }
 
 .clubs-grid-wrapper { width: 100%; }
 .clubs-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 34px; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
@@ -44,7 +44,7 @@
 
 .club-body { display: flex; flex-direction: column; gap: 8px; padding: 14px 4px 0; }
 .club-name { margin: 0; font-size: clamp(1.05rem,2.4vw,1.35rem); font-weight: 800; letter-spacing: .02em; }
-.club-desc { margin: 0; font-size: clamp(.85rem,1.8vw,.95rem); line-height: 1.5; color: #dde4ec; font-weight: 500; }
+.club-desc { margin: 0; font-size: clamp(.85rem,1.8vw,.95rem); line-height: 1.5; color: inherit; font-weight: 500; }
 
 .club-ig { position: absolute; bottom: 10px; right: 12px; width: 42px; height: 42px; display: grid; place-items: center; background: #ffffff; border: 1px solid #ffffff; border-radius: 14px; backdrop-filter: blur(4px); box-shadow: 0 6px 16px -8px rgba(0,0,0,0.4); transition: background 240ms ease, transform 300ms ease, box-shadow 300ms ease, border-color 240ms ease; }
 .club-ig img { 

@@ -28,7 +28,7 @@
       font-size: clamp(2.2rem, 6.5vw, 3.4rem);
       line-height: 1.05;
       font-weight: 900;
-      color: #0b5d35;
+      color: #ffffff;
       font-family: Impact, Haettenschweiler, 'Arial Black', 'Segoe UI Black', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
       text-shadow: 0 2px 8px rgba(0,0,0,0.22);
       position: relative;
@@ -56,19 +56,30 @@
     }
     
     .year-selector button {
-      background: white;
-      color: #5aac5a;
-      border: 2px solid #5aac5a;
+      /* Match event card container styling */
+      background: rgba(6, 20, 12, 0.65);
+      color: #ffffff;
+      border: 1px solid rgba(255,255,255,0.22);
       padding: 0.5rem 1.25rem;
-      border-radius: 8px;
-      font-weight: bold;
+      border-radius: 12px;
+      font-weight: 700;
       cursor: pointer;
-      transition: background 0.3s;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+      backdrop-filter: blur(6px);
+      transition: background 0.25s ease, transform 0.12s ease, box-shadow 0.25s ease;
     }
     
     .year-selector button.active {
-      background: #5aac5a;
-      color: white;
+      background: rgba(6, 20, 12, 0.75);
+      color: #ffffff;
+      border-color: #f4d21b;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.34);
+      transform: translateY(-1px);
+    }
+
+    .year-selector button:hover {
+      background: rgba(6, 20, 12, 0.78);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.34);
     }
     
     .event-grid {
@@ -129,7 +140,7 @@
     }
     
     .event-card p {
-      color: #ecf7f0;
+      color: inherit;
       margin-bottom: 1rem;
     }
     
