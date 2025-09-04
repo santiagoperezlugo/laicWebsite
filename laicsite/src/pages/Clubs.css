@@ -1,22 +1,45 @@
 .clubs-page {
   min-height: 100vh;
   width: 100%;
+  /* Match Resources page gradient */
   background:
-    radial-gradient(120% 80% at 50% -10%, rgba(45,110,203,0.10) 0%, rgba(45,110,203,0) 60%),
-    linear-gradient(180deg, #f4d31b22 0%, #137108d1 100%);
+    radial-gradient(120% 80% at 50% -10%, rgba(34,197,94,0.12) 0%, rgba(34,197,94,0) 60%),
+    linear-gradient(180deg, #ffffff 0%, #f3fbf6 8%, #cfeedd 18%, #7bc795 35%, #2e9150 55%, #1e7a3f 100%);
   color: #ffffff;
 }
 
-.clubs-main { max-width: 1300px; margin: 0 auto; padding: 140px 28px 80px; }
+.clubs-main { max-width: 1300px; margin: 0 auto; padding: 132px 28px 80px; }
 
 .clubs-hero { text-align: center; margin-bottom: 34px; }
-.clubs-title { margin: 0 0 12px; font-size: clamp(2rem,5vw,3.2rem); font-weight: 900; letter-spacing: .5px; }
-.clubs-tag { margin: 0 auto; max-width: 640px; font-size: clamp(1rem,2.1vw,1.2rem); line-height: 1.55; color: #c9d1db; }
+.clubs-title { 
+  margin: 0 0 12px; 
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(2.2rem, 6.5vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 900;
+  color: #0b5d35;
+  font-family: Impact, Haettenschweiler, 'Arial Black', 'Segoe UI Black', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.22);
+  position: relative;
+}
+.clubs-title::after {
+  content: '';
+  display: block;
+  width: 140px;
+  max-width: 28vw;
+  height: 7px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #00d084 0%, #16a34a 60%, #0b5d35 100%);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.clubs-tag { margin: 0 auto; max-width: 640px; font-size: clamp(1rem,2.1vw,1.2rem); line-height: 1.55; color: #0b3d24; }
 
 .clubs-grid-wrapper { width: 100%; }
 .clubs-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 34px; grid-template-columns: repeat(auto-fit,minmax(260px,1fr)); }
 
-.club-card { position: relative; display: flex; flex-direction: column; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 22px; overflow: hidden; min-height: 360px; padding: 14px 14px 64px; isolation: isolate; cursor: pointer; box-shadow: 0 6px 18px -8px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04); transition: transform 380ms cubic-bezier(.18,.85,.36,1), box-shadow 420ms cubic-bezier(.18,.85,.36,1), border-color 420ms ease, background 420ms ease; }
+.club-card { position: relative; display: flex; flex-direction: column; background: rgba(6, 20, 12, 0.65); border: 1px solid rgba(255,255,255,0.22); border-radius: 14px; overflow: hidden; min-height: 360px; padding: 14px 14px 64px; isolation: isolate; cursor: pointer; box-shadow: 0 10px 28px rgba(0,0,0,0.28); backdrop-filter: blur(6px); transition: transform 380ms cubic-bezier(.18,.85,.36,1), box-shadow 420ms cubic-bezier(.18,.85,.36,1), border-color 420ms ease, background 420ms ease; }
 
 .club-card:focus-visible { outline: 2px solid #f4d21b; outline-offset: 3px; }
 
@@ -27,17 +50,22 @@
 .club-name { margin: 0; font-size: clamp(1.05rem,2.4vw,1.35rem); font-weight: 800; letter-spacing: .02em; }
 .club-desc { margin: 0; font-size: clamp(.85rem,1.8vw,.95rem); line-height: 1.5; color: #dde4ec; font-weight: 500; }
 
-.club-ig { position: absolute; bottom: 10px; right: 12px; width: 42px; height: 42px; display: grid; place-items: center; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); border-radius: 14px; backdrop-filter: blur(4px); transition: background 240ms ease, transform 300ms ease, box-shadow 300ms ease; }
-.club-ig img { width: 24px; height: 24px; display: block; filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5)); }
-.club-ig:hover, .club-ig:focus-visible { background: #E4405F; border-color: #E4405F; box-shadow: 0 4px 18px -4px rgba(228,64,95,0.65), 0 0 0 1px rgba(255,255,255,0.12); transform: translateY(-3px); }
+.club-ig { position: absolute; bottom: 10px; right: 12px; width: 42px; height: 42px; display: grid; place-items: center; background: #ffffff; border: 1px solid #ffffff; border-radius: 14px; backdrop-filter: blur(4px); box-shadow: 0 6px 16px -8px rgba(0,0,0,0.4); transition: background 240ms ease, transform 300ms ease, box-shadow 300ms ease, border-color 240ms ease; }
+.club-ig img { 
+  width: 24px; 
+  height: 24px; 
+  display: block; 
+  filter: brightness(0) invert(1) drop-shadow(1px 0 0 #000) drop-shadow(-1px 0 0 #000) drop-shadow(0 1px 0 #000) drop-shadow(0 -1px 0 #000);
+}
+.club-ig:hover, .club-ig:focus-visible { background: #E4405F; border-color: #E4405F; box-shadow: 0 6px 20px -6px rgba(228,64,95,0.6), 0 0 0 1px rgba(255,255,255,0.12); transform: translateY(-3px); }
 
 /* Hover grow effect */
-.club-card:hover { transform: translateY(-6px) scale(1.04); box-shadow: 0 14px 40px -14px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.06); background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); }
+.club-card:hover { transform: translateY(-6px) scale(1.04); box-shadow: 0 14px 40px -14px rgba(0,0,0,0.75), 0 0 0 1px rgba(255,255,255,0.06); background: rgba(6, 20, 12, 0.7); border-color: rgba(255,255,255,0.28); }
 .club-card:hover .club-media img { transform: scale(1.02); }
 
 /* Smooth image scale */
 .club-media img { transition: transform 600ms cubic-bezier(.18,.85,.36,1); }
 
 /* Responsive tweaks */
-@media (max-width: 680px) { .clubs-main { padding: 120px 20px 72px; } .club-card { min-height: 300px; padding: 12px 12px 58px; } .club-ig { width: 38px; height: 38px; } }
+@media (max-width: 680px) { .clubs-main { padding: 132px 20px 72px; } .club-card { min-height: 300px; padding: 12px 12px 58px; } .club-ig { width: 38px; height: 38px; } }
 @media (max-width: 460px) { .clubs-grid { gap: 24px; } }

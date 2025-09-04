@@ -2,13 +2,13 @@
 .resources-page {
   min-height: 100vh;
   background:
-    radial-gradient(120% 80% at 50% -10%, rgba(45,110,203,0.10) 0%, rgba(45,110,203,0) 60%),
-    linear-gradient(180deg, #f4d31b22 0%, #137108d1 100%);
+    radial-gradient(120% 80% at 50% -10%, rgba(34,197,94,0.12) 0%, rgba(34,197,94,0) 60%),
+    linear-gradient(180deg, #ffffff 0%, #f3fbf6 8%, #cfeedd 18%, #7bc795 35%, #2e9150 55%, #1e7a3f 100%);
   color: #fff;
 }
 
 .resources-main {
-  padding-top: 6rem;
+  padding-top: 96px;
   max-width: 1100px;
   margin: 0 auto;
   padding-left: 1rem;
@@ -21,14 +21,31 @@
 }
 
 .resources-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(2.2rem, 6.5vw, 3.4rem);
+  line-height: 1.05;
+  font-weight: 900;
+  color: #0b5d35;
+  font-family: Impact, Haettenschweiler, 'Arial Black', 'Segoe UI Black', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', Arial, sans-serif;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.22);
+  position: relative;
+}
+.resources-title::after {
+  content: '';
+  display: block;
+  width: 140px;
+  max-width: 28vw;
+  height: 7px;
+  margin: 10px auto 0;
+  background: linear-gradient(90deg, #00d084 0%, #16a34a 60%, #0b5d35 100%);
+  border-radius: 999px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
 .resources-tag {
-  color: #d8e0ff;
-  opacity: 0.9;
+  color: #0b3d24; /* on-theme dark green for better contrast */
+  opacity: 1;
 }
 
 .resources-controls {
@@ -43,27 +60,31 @@
   width: min(520px, 100%);
   padding: 0.75rem 1rem;
   border-radius: 12px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.22);
+  background: rgba(6, 20, 12, 0.5);
   color: #fff;
+  backdrop-filter: blur(6px);
 }
 
-.resources-search::placeholder { color: #cbd3ff; opacity: 0.7; }
+.resources-search::placeholder { color: #cff6df; opacity: 0.75; }
 
 .resources-view {
   display: inline-flex;
-  border: 1px solid rgba(255,255,255,0.2);
-  border-radius: 10px;
+  background: rgba(6, 20, 12, 0.65);
+  border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 14px;
   overflow: hidden;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
 }
 .resources-view button {
   background: transparent;
-  color: #fff;
+  color: #eaf6ef;
   padding: 0.6rem 0.9rem;
 }
 .resources-view button.active {
-  background: #f4d21b;
-  color: #0e1328;
+  background: #22c55e;
+  color: #0b3d24;
   font-weight: 700;
 }
 
@@ -76,13 +97,14 @@
 }
 
 .chip {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: #fff;
-  padding: 0.4rem 0.75rem;
+  background: rgba(6, 20, 12, 0.65);
+  border: 1px solid rgba(255,255,255,0.22);
+  color: #eaf6ef;
+  padding: 0.45rem 0.8rem;
   border-radius: 999px;
+  font-weight: 650;
 }
-.chip.active { background: #184e29; border-color: #33a06f; }
+.chip.active { background: rgba(6, 20, 12, 0.75); border-color: #33a06f; color: #ffffff; }
 .chip.clear { background: transparent; border-color: rgba(255,255,255,0.25); }
 
 .accordion { margin: 1rem auto; max-width: 900px; }
@@ -91,8 +113,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(6, 20, 12, 0.6);
+  border: 1px solid rgba(255,255,255,0.22);
   padding: 0.85rem 1rem;
   border-radius: 12px;
 }
@@ -101,15 +123,15 @@
   overflow: hidden;
 }
 .accordion-inner {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(6, 20, 12, 0.5);
+  border: 1px solid rgba(255,255,255,0.18);
   border-top: none;
   padding: 0.75rem 1rem;
   border-radius: 0 0 12px 12px;
 }
 .kyr-list { margin: 0.25rem 1rem; display: grid; gap: 0.35rem; }
 .kyr-links { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
-.kyr-links a { color: #f4d21b; text-decoration: underline; }
+.kyr-links a { color: #22c55e; text-decoration: underline; font-weight: 600; }
 
 .resources-grid {
   margin-top: 1rem;
@@ -119,12 +141,14 @@
 }
 
 .resource-card, .resource-row {
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(6, 20, 12, 0.65);
+  border: 1px solid rgba(255,255,255,0.22);
   border-radius: 14px;
-  padding: 1rem;
+  padding: 1.05rem;
   display: flex;
   flex-direction: column;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.28);
+  backdrop-filter: blur(6px);
 }
 
 .resource-top {
@@ -133,19 +157,17 @@
   align-items: center;
   margin-bottom: 0.35rem;
 }
-.resource-cat { font-size: 0.75rem; background: #1d2951; padding: 0.2rem 0.5rem; border-radius: 6px; opacity: 0.9; }
-.bookmark { background: transparent; color: #d8e0ff; }
-.bookmark.active { color: #f4d21b; }
+.resource-cat { font-size: 0.78rem; background: rgba(6, 20, 12, 0.65); color: #eaf6ef; padding: 0.25rem 0.55rem; border-radius: 6px; opacity: 1; font-weight: 750; border: 1px solid rgba(255,255,255,0.22); }
+.bookmark { background: transparent; color: #e7f7ee; }
+.bookmark.active { color: #22c55e; }
 
-.resource-name { margin: 0.25rem 0; font-size: 1.05rem; }
-.resource-desc { color: #dfe6ff; opacity: 0.9; font-size: 0.95rem; }
+.resource-name { margin: 0.25rem 0; font-size: 1.08rem; color: #ffffff; font-weight: 700; }
+.resource-desc { color: #ecf7f0; opacity: 1; font-size: 0.98rem; line-height: 1.55; }
 .resource-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
-.tag { font-size: 0.75rem; opacity: 0.9; background: rgba(255,255,255,0.07); padding: 0.2rem 0.45rem; border-radius: 6px; }
+.tag { font-size: 0.75rem; opacity: 0.95; background: rgba(255,255,255,0.12); color: #eaf6ef; padding: 0.2rem 0.45rem; border-radius: 6px; }
 
 .resource-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
-.btn { background: #f4d21b; color: #0e1328; border-radius: 8px; padding: 0.45rem 0.75rem; font-weight: 700; }
+.btn { background: #22c55e; color: #0b3d24; border-radius: 8px; padding: 0.5rem 0.85rem; font-weight: 800; }
 .btn.secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
 
-.resources-footer-cta { text-align: center; margin: 2rem 0 3rem; }
-.resources-footer-cta h2 { margin-bottom: 0.25rem; }
-.resources-footer-cta .cta-actions { margin-top: 0.5rem; }
+/* resources-footer-cta removed */

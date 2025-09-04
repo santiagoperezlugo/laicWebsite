@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 import './Contact.css';
 
 type ContactLink = {
@@ -35,7 +35,7 @@ const LINKS: ContactLink[] = [
 ];
 
 export default function Contact() {
-  const containerRef = useRef<HTMLElement | null>(null);
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
   // Pointer reactive highlight + tilt
   useEffect(() => {
@@ -91,18 +91,21 @@ export default function Contact() {
   }, []);
 
   return (
-    <div className="contact-page">
-      <div className="background-orb" aria-hidden />
-      <Header />
-      <main className="contact-main" ref={containerRef}>
-        <section className="contact-hero">
-          <h1 className="contact-title">Connect with us @:</h1>
-          <p className="contact-tag">
-            We love meeting new people! Slide into our DMs, say hi on LinkedIn, or drop us an email.
-          </p>
-        </section>
-
-        <section className="contact-cards" aria-label="Contact Channels">
+    <div className="contact-hero-shell" ref={containerRef}>
+      <header className="contact-topnav">
+        <div className="contact-topnav-content">
+          <nav className="contact-topnav-nav">
+            <Link to="/home" className="contact-topnav-link">HOME</Link>
+            <Link to="/about" className="contact-topnav-link">ABOUT</Link>
+            <Link to="/events" className="contact-topnav-link">EVENTS</Link>
+            <Link to="/clubs" className="contact-topnav-link">CLUBS</Link>
+            <Link to="/resources" className="contact-topnav-link">RESOURCES</Link>
+            <Link to="/contact" className="contact-topnav-link">CONTACT</Link>
+          </nav>
+        </div>
+      </header>
+      <div className="contact-hero-content">
+        <div className="contact-icon-grid" aria-label="Contact Channels">
           {LINKS.map((l, i) => (
             <a
               key={l.id}
@@ -117,12 +120,8 @@ export default function Contact() {
               <div className="card-label" aria-hidden>{l.label}</div>
             </a>
           ))}
-        </section>
-
-        <footer className="contact-footer">
-          <p>Prefer another platform? Let us know — we’re always down to connect.</p>
-        </footer>
-      </main>
+        </div>
+      </div>
     </div>
   );
 }

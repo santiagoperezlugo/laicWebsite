@@ -340,16 +340,6 @@ export default function Resources() {
             ))}
           </AnimatePresence>
         </section>
-
-        <section className="resources-footer-cta">
-          <h2>Missing something?</h2>
-          <p>
-            Help us keep this page current. Send additions or corrections to our team.
-          </p>
-          <div className="cta-actions">
-            <a className="btn" href="mailto:email@placeholder.com?subject=LAIC%20Resources%20Update">Email a resource</a>
-          </div>
-        </section>
       </main>
     </div>
   );
