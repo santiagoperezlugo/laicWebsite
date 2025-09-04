@@ -5,6 +5,16 @@
   width: 100%;
   z-index: 1000;
   background: transparent; /* no background; show global animated bg */
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.header-hidden {
+  transform: translateY(-100%);
+}
+
+.header-visible {
+  transform: translateY(0);
 }
 
 .header-content {

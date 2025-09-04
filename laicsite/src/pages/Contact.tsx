@@ -117,7 +117,6 @@ export default function Contact() {
               aria-label={l.aria}
             >
               <div className="icon" role="img" aria-label={l.aria} />
-              <div className="card-label" aria-hidden>{l.label}</div>
             </a>
           ))}
         </div>
