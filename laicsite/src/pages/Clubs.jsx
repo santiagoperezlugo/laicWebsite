@@ -124,7 +124,7 @@ export default function Clubs() {
       <Header />
       <main className="clubs-main" aria-labelledby="clubs-title">
         <section className="clubs-hero">
-          <h1 id="clubs-title" className="clubs-title">Clubs & Initiatives</h1>
+          <h1 id="clubs-title" className="clubs-title">CIO's and Organizations</h1>
           <p className="clubs-tag">Explore Latinx-led communities, programs, and traditions at UVA</p>
         </section>
 

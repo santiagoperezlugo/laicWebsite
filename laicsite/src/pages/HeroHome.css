@@ -89,10 +89,10 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -6px;
     width: 100%;
-    height: 2px;
-    background: #60a5fa;
+    height: 3px;
+    background: #f4d21b;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.25s ease-out;

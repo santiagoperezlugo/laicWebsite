@@ -379,7 +379,7 @@ export default function About() {
   </section>
 
   <section className="about-divider theme-blue reveal" aria-labelledby="about-divider-title">
-          <h2 id="about-divider-title" className="divider-kicker unified-title">What We Do</h2>
+          <h2 id="about-divider-title" className="mission-title unified-title">WHAT WE DO</h2>
           <p className="divider-lead">We bring people together—through community, culture, leadership, and service.</p>
           <ul className="what-list" aria-label="LAIC programs and focus areas">
             <li className="what-item reveal">
@@ -415,7 +415,7 @@ export default function About() {
             />
           </div>
           <div className="intro-copy reveal">
-            <h2 className="section-title unified-title">Join Our Community</h2>
+            <h2 className="section-title mission-title unified-title">Join Our Community</h2>
             <p>
               LAIC is a welcoming home for Latinx students at UVA—a place to find friends, celebrate culture,
               and build community that lasts beyond Grounds. Through socials, heritage events, and leadership
@@ -439,7 +439,7 @@ export default function About() {
         </section>
 
         <section className="about-hero reveal">
-          <h1 className="about-title">Meet our Executive Board</h1>
+          <h1 className="mission-title about-title">Meet our Executive Board</h1>
         </section>
 
         <section className="about-exec reveal">
