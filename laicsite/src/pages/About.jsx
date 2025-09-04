@@ -449,18 +449,6 @@ export default function About() {
         </section>
         
       </main>
-      
-      <footer className="about-footer">
-        <div className="footer-content">
-          <nav className="footer-nav">
-            {['HOME', 'ABOUT', 'EVENTS', 'CLUBS', 'RESOURCES', 'CONTACT'].map(tab => (
-              <a key={tab} href={`/${tab.toLowerCase()}`} className="footer-link">
-                {tab}
-              </a>
-            ))}
-          </nav>
-        </div>
-      </footer>
     </>
   );
 }
