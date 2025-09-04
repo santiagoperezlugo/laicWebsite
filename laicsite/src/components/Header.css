@@ -4,15 +4,7 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background: linear-gradient(
-    130deg,
-    #184e29,
-    #0e1328,
-    #184e29,
-    #0e1328
-  );
-  background-size: 400% 400%;
-  animation: gradientShift 10s ease-in-out infinite;
+  background: transparent; /* no background; show global animated bg */
 }
 
 .header-content {
@@ -57,11 +49,7 @@
   transform: scaleX(1);
 }
 
-@keyframes gradientShift {
-  0%   { background-position: 0% 50%; }
-  50%  { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
+/* removed gradient animation */
 
 @media (max-width: 480px) {
   .header-nav {

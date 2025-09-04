@@ -1,0 +1,15 @@
+/* Final white-text override applied last in bundle */
+:root, html, body, #root,
+body *, body *::before, body *::after {
+  color: #ffffff !important;
+}
+
+/* Interactive elements */
+a, a:hover, a:visited, a:active, a:focus {
+  color: #ffffff !important;
+}
+button, input, textarea, select {
+  color: #ffffff !important;
+  caret-color: #ffffff !important;
+}
+::placeholder { color: rgba(255,255,255,0.75) !important; }
