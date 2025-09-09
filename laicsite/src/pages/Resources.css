@@ -70,7 +70,7 @@
 }
 .resources-view button {
   background: transparent;
-  color: #eaf6ef;
+  color: #f4d21b;
   padding: 0.6rem 0.9rem;
 }
 .resources-view button.active {
@@ -95,8 +95,8 @@
   border-radius: 999px;
   font-weight: 650;
 }
-.chip.active { background: rgba(6, 20, 12, 0.75); border-color: #33a06f; color: #ffffff; }
-.chip.clear { background: transparent; border-color: rgba(255,255,255,0.25); }
+.chip.active { background: rgba(6, 20, 12, 0.75); border-color: #f4d21b; color: #f4d21b; }
+.chip.clear { background: rgba(6, 20, 12, 0.75); border-color: #f4d21b; }
 
 .accordion { margin: 1rem auto; max-width: 900px; }
 .accordion-header {

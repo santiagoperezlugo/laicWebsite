@@ -7,7 +7,7 @@ const execs = [
   {
     name: 'Steven Santos',
     role: 'Co-President',
-    image: '/images/exec/steven.jpeg',
+    image: '/images/exec/steven.jpg',
     hometown: 'Columbia, Maryland',
     major: 'Economics',
     ethnicity: 'Honduran & German',
@@ -67,6 +67,12 @@ const execs = [
     name: 'Cynthia Gutierrez',
     role: 'Treasurer',
     image: '/images/exec/cynthia.jpeg',
+    hometown: 'Manassas Park, Virginia',
+    major: 'Commerece',
+    ethnicity: 'Honduran',
+    funFact: 'I love playing volleyball and have played for seven years',
+    whyLaic:' I joined LAIC to connect with others and help build a space where our community feels welcomed! ',
+    
   },
 
   {
@@ -95,7 +101,7 @@ const execs = [
   {
     name: 'Epi Francisco',
     role: 'Historian',
-    image: '/images/image.png',
+    image: '/images/exec/epi.JPG',
     hometown: 'Hilton Head Island, SC',
     major: 'Kinesiology',
     ethnicity: 'Mexican',
@@ -161,7 +167,7 @@ const execs = [
   {
     name: 'Selma Perez',
     role: 'Event Cordinator',
-    image: '/images/image.png',
+    image: '/images/exec/selma.JPG',
     hometown: 'Alexandria, VA',
     major: 'Government',
     ethnicity: 'Salvadoran',
