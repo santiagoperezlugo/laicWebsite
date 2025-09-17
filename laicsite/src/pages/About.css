@@ -12,8 +12,6 @@
   color: #ffffff;
 }
 
-
-
 .about-page::before,
 .about-page::after {
   content: none;
@@ -517,4 +515,44 @@
 .divider-kicker.reveal, .about-title.reveal, .section-title.reveal {
   transform: translateY(8px);
   transition-duration: 700ms;
+}
+
+/* ========================= */
+/*        ADDED RULES        */
+/* ========================= */
+
+/* (A) Global box sizing to avoid width drift */
+*, *::before, *::after { box-sizing: border-box; }
+
+/* (B) Ensure wrappers truly center and text aligns center */
+.about-intro,
+.about-section,
+.about-divider,
+.exec-swiper-container {
+  margin-inline: auto;
+  text-align: center;
+}
+
+/* (C) Let images/cards center themselves when narrower than container */
+.intro-image { margin-inline: auto; display: block; }
+
+/* (D) Center items within grids */
+.feature-grid { justify-items: center; }
+/* what-list already has justify-items: center; keep it */
+
+/* (E) Mobile tweaks for spacing/centering */
+@media (max-width: 680px) {
+  .about-page { padding: 96px 12px 40px; }
+  .what-list { width: 100%; padding-inline: 0; }
+  .what-item { margin-inline: auto; } /* hard-center each card */
+}
+
+/* (F) Avoid truncation that can look off-center on narrow screens */
+@media (max-width: 480px) {
+  .section-lead { white-space: normal; text-overflow: clip; }
+}
+
+/* (G) Redundant but explicit: bullet rows center when stacked */
+@media (max-width: 540px) {
+  .intro-point { text-align: center; grid-template-columns: 1fr; }
 }
