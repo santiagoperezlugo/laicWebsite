@@ -12,9 +12,9 @@ const clubs = [
   },
   {
     id: ' ALPFA',
-    name: 'Association of Lation Professionals for America',
+    name: 'Association of Latino Professionals for America',
     image: '/images/clubs/ALPFA.jpg',
-    description: 'The Latino Medical Student Association at the University of Virginia School of Medicine',
+    description: 'ALPFA at UVA is a non-profit organization that focuses on empowering & developing Latino men and women as leaders of character for the nation.',
     instagram: 'https://www.instagram.com/alpfa.uva/'
   },
   {
@@ -50,7 +50,7 @@ const clubs = [
     name: 'Latinx Empowerment and Financial-Literacy',
     image: '/images/clubs/LEAF.jpg',
     description: 'Latinx Empowerment and Financial-Literacy aims to empower Latinx students at the University of Virginia through educational workshops and more!',
-    instagram: 'https://www.instagram.com/cafeatuva/'
+    instagram: 'https://www.instagram.com/leafuva/'
   },
   {
     id: 'LNSU',
@@ -61,7 +61,7 @@ const clubs = [
   },
   {
     id: 'LLI',
-    name: 'Latin Leadership Insititute',
+    name: 'Latinx Leadership Insititute',
     image: '/images/clubs/lli.png',
     description: 'The Latinx Leadership Institute is a student-led, and cohort-based leadership development program for 1st, 2nd, and 3rd Year Latinx emerging leaders.',
     instagram: 'https://www.instagram.com/lliatuva/'
@@ -91,7 +91,7 @@ const clubs = [
     id: 'PMP',
     name: ' Peer Mentoring Program',
     image: '/images/clubs/pmp.png',
-    description: 'Interactive Latin music trivia experience mixing fun, learning, and friendly competition.',
+    description: '🔹 UVA Established 1999 Peer Mentoring Program |🔹 Unity, Empowerment, Community',
     instagram: 'https://www.instagram.com/pmpuva/'
   },
   {
