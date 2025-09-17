@@ -31,6 +31,18 @@ const Events = () => {
         date: "2025-09-04",
         image: '/images/Smores25.png',
         description: ''
+      },
+      {
+        title: "Movie night",
+        date: "2025-09-09",
+        image: '/images/MovieNight.PNG',
+        description: ''
+      },
+      {
+        title: "Soccer Tournament",
+        date: "2025-09-27",
+        image: '/images/soccertournament.PNG',
+        description: ''
       }
     ],
     '2024-2025': [
