@@ -43,7 +43,14 @@ const Events = () => {
         date: "2025-09-27",
         image: '/images/soccertournament.PNG',
         description: ''
-      }
+      },
+      {
+        title: 'Jeopardy Night ',
+        date: "2025-09-19",
+        image: '/images/JeopardyF25 .PNG',
+        description: ''
+      },
+      
     ],
     '2024-2025': [
       {
