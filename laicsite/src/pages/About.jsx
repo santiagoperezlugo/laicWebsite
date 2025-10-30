@@ -111,7 +111,7 @@ const execs = [
 
   {
     name: 'Adrian Celaya',
-    role: 'Event Cordinator',
+    role: 'Event Coordinator',
     image: '/images/exec/adrian.jpeg',
     hometown: 'Virginia Beach, VA',
     major: 'Mechanical Engineering',
@@ -122,7 +122,7 @@ const execs = [
   },
   {
     name: 'Eric Thompson',
-    role: 'Event Cordinator',
+    role: 'Event Coordinator',
     image: '/images/exec/eric.jpeg',
     hometown: 'Centreville, VA',
     major: 'Commerce & Computer Science',
@@ -133,7 +133,7 @@ const execs = [
   },
   {
     name: 'Jimmy Sejas',
-    role: 'Event Cordinator',
+    role: 'Event Coordinator',
     image: '/images/exec/jimmy.jpeg',
     hometown: 'Manassas, VA',
     major: 'Mechanical Engineering',
@@ -144,7 +144,7 @@ const execs = [
   },
   {
     name: 'Madison Sejas Siles',
-    role: 'Event Cordinator',
+    role: 'Event Coordinator',
     image: '/images/exec/Madison.jpeg',
     hometown: 'Fairfax, VA',
     major: 'Computer Science',
@@ -155,7 +155,7 @@ const execs = [
   },
   {
     name: 'Santiago Perez',
-    role: 'Event Cordinator',
+    role: 'Event Coordinator',
     image: '/images/exec/santi.jpg',
     hometown: 'Arlington, VA',
     major: 'Computer Science',
@@ -166,7 +166,7 @@ const execs = [
   },
   {
     name: 'Selma Perez',
-    role: 'Event Cordinator',
+    role: 'Event Coordinator',
     image: '/images/exec/selma.JPG',
     hometown: 'Alexandria, VA',
     major: 'Government',

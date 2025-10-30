@@ -50,6 +50,12 @@ const Events = () => {
         image: '/images/JeopardyF25 .PNG',
         description: ''
       },
+      {
+        title: 'Spooky Bracelet Making ',
+        date: "2025-10-29",
+        image: '/images/SpookyBracelet.PNG',
+        description: ''
+      },
       
     ],
     '2024-2025': [
