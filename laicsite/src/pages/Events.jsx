@@ -68,6 +68,24 @@ const Events = () => {
         image: '/images/Smores Night.PNG',
         description: ''
       },
+      { 
+        title: "Run w/ Jim(my)",
+        date: "2025-10-25",
+        image: '/images/Run with Jim.png',
+        description: ''
+      },
+      { 
+        title: "Merry & Motivated",
+        date: "2025-12-10",
+        image: '/images/MerryandMotiv.png',
+        description: ''
+      },
+      { 
+        title: "ERC After Dark",
+        date: "2025-12-04",
+        image: '/images/ERCafterdark.png',
+        description: ''
+      },
     ],
     '2024-2025': [
       {
@@ -178,6 +196,7 @@ const Events = () => {
         image: '/images/FieldDaySpring25.png',
         description: ''
       },
+      
     ],
   };
 
