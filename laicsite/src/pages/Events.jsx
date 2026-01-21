@@ -56,7 +56,18 @@ const Events = () => {
         image: '/images/SpookyBracelet.PNG',
         description: ''
       },
-      
+      {
+        title: "Dia de Muertos ",
+        date: "2025-11-03",
+        image: '/images/Day of The Dead.PNG',
+        description: ''
+      },
+      {
+        title: "S'mores Night ",
+        date: "2026-01-20",
+        image: '/images/Smores Night.PNG',
+        description: ''
+      },
     ],
     '2024-2025': [
       {
