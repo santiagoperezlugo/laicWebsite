@@ -4,9 +4,11 @@ import Header from '../components/Header';
 
 
 const Events = () => {
-  const [selectedYear, setSelectedYear] = useState('2025-2026');
+  const [selectedYear, setSelectedYear] = useState('2026-2027');
 
   const events = {
+    '2026-2027' :[
+    ],
     '2025-2026': [
       {
         title: 'Field Day!',
@@ -215,18 +217,26 @@ const Events = () => {
   
   return (
     <div className="events-page">
-  <Header />
-
+      <Header />
+  
       <div className="events-wrapper">
         <h1 className="events-title">Events</h1>
-
+  
         <div className="year-selector">
+          <button
+            onClick={() => setSelectedYear('2026-2027')}
+            className={selectedYear === '2026-2027' ? 'active' : ''}
+          >
+            2026-2027
+          </button>
+  
           <button
             onClick={() => setSelectedYear('2025-2026')}
             className={selectedYear === '2025-2026' ? 'active' : ''}
           >
             2025-2026
           </button>
+  
           <button
             onClick={() => setSelectedYear('2024-2025')}
             className={selectedYear === '2024-2025' ? 'active' : ''}
@@ -234,7 +244,7 @@ const Events = () => {
             2024-2025
           </button>
         </div>
-
+        
         <div className="event-grid">
           {[...events[selectedYear]]
             .sort((a, b) => new Date(b.date) - new Date(a.date))
