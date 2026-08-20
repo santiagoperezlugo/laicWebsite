@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './HeroHome.css';
-
+import lsaLogo from '../assets/lsa-logo.png';
 
 const TABS = ['ABOUT', 'EVENTS', 'CLUBS', 'RESOURCES', 'CONTACT'];
 
@@ -10,17 +10,26 @@ export default function HeroHome() {
     <div className="hero">
       <div className="hero-content">
         <img
-          src="/images/image.png"
-          alt="LAIC logo"
+          src={lsaLogo}
+          alt="Latinx Student Association logo"
           className="hero-logo"
         />
-        <h1 className="hero-subtitle">LATIN AMERICAN IDENTITIES COALITION</h1>
+
+        <h1 className="hero-subtitle">
+          LATINX STUDENT ASSOCIATION
+        </h1>
+
         <p className="hero-tagline">
           "Celebrating Latinx identities at UVA and beyond"
         </p>
+
         <nav className="hero-nav">
           {TABS.map(tab => (
-            <Link key={tab} to={`/${tab.toLowerCase()}`} className="hero-link">
+            <Link
+              key={tab}
+              to={`/${tab.toLowerCase()}`}
+              className="hero-link"
+            >
               {tab}
             </Link>
           ))}

@@ -43,7 +43,7 @@ body::before {
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(130deg, #1d2951, #184e29, #f4d21b, #1d2951);
+  background: linear-gradient(130deg, #183656, #2354E7, #EB532B, #EF1C1C, #183656, #006400);
   background-size: 400% 400%;
   animation: gradientShift 16s ease-in-out infinite;
 }

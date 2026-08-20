@@ -32,7 +32,7 @@
   max-width: 28vw;
   height: 7px;
   margin: 10px auto 0;
-  background: linear-gradient(90deg, #22c55e, #16a34a, #0b5d35);
+  background: linear-gradient(90deg, #2354E7, #EF1C1C);
   border-radius: 999px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
@@ -57,7 +57,7 @@
   backdrop-filter: blur(6px);
 }
 
-.resources-search::placeholder { color: #cff6df; opacity: 0.75; }
+.resources-search::placeholder { color: #3DBEE2; opacity: 0.75; }
 
 .resources-view {
   display: inline-flex;
@@ -74,8 +74,8 @@
   padding: 0.6rem 0.9rem;
 }
 .resources-view button.active {
-  background: #22c55e;
-  color: #0b3d24;
+  background: #EB532B;
+  color: #183656;
   font-weight: 700;
 }
 
@@ -122,7 +122,7 @@
 }
 .kyr-list { margin: 0.25rem 1rem; display: grid; gap: 0.35rem; }
 .kyr-links { display: flex; gap: 0.75rem; margin-top: 0.5rem; }
-.kyr-links a { color: #22c55e; text-decoration: underline; font-weight: 600; }
+.kyr-links a { color: #EB532B; text-decoration: underline; font-weight: 600; }
 
 .resources-grid {
   margin-top: 1rem;
@@ -149,16 +149,16 @@
   margin-bottom: 0.35rem;
 }
 .resource-cat { font-size: 0.78rem; background: rgba(6, 20, 12, 0.65); color: #eaf6ef; padding: 0.25rem 0.55rem; border-radius: 6px; opacity: 1; font-weight: 750; border: 1px solid rgba(255,255,255,0.22); }
-.bookmark { background: transparent; color: #e7f7ee; }
-.bookmark.active { color: #22c55e; }
+.bookmark { background: transparent; color: #FFFFFF; }
+.bookmark.active { color: #EB532B; }
 
 .resource-name { margin: 0.25rem 0; font-size: 1.08rem; color: #ffffff; font-weight: 700; }
-.resource-desc { color: #ecf7f0; opacity: 1; font-size: 0.98rem; line-height: 1.55; }
+.resource-desc { color: #FFFFFF; opacity: 1; font-size: 0.98rem; line-height: 1.55; }
 .resource-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.5rem; }
 .tag { font-size: 0.75rem; opacity: 0.95; background: rgba(255,255,255,0.12); color: #eaf6ef; padding: 0.2rem 0.45rem; border-radius: 6px; }
 
 .resource-actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: auto; }
-.btn { background: #22c55e; color: #0b3d24; border-radius: 8px; padding: 0.5rem 0.85rem; font-weight: 800; }
+.btn { background: #EB532B; color: #183656; border-radius: 8px; padding: 0.5rem 0.85rem; font-weight: 800; }
 .btn.secondary { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,0.3); }
 
 /* resources-footer-cta removed */
