@@ -11,79 +11,79 @@ const Events = () => {
       {
         title: 'Field Day!',
         date: "2025-08-26",
-        image: '/images/FieldDay25.png',
+        image: '/images/events/25-26/FieldDay25.png',
         description: ''
       },
       {
         title: 'Feliz Friday!',
         date: "2025-08-29",
-        image: '/images/Feliz_Friday25.png',
+        image: '/images/events/25-26/Feliz_Friday25.png',
         description: ''
       },
       {
         title: 'Pickleball Mixer!',
         date: "2025-08-31",
-        image: '/images/PickleBall.png',
+        image: '/images/events/25-26/PickleBall.png',
         description: ''
       },
       {
         title: "S'mores night",
         date: "2025-09-04",
-        image: '/images/Smores25.png',
+        image: '/images/events/25-26/Smores25.png',
         description: ''
       },
       {
         title: "Movie night",
         date: "2025-09-09",
-        image: '/images/MovieNight.PNG',
+        image: '/images/events/25-26/MovieNight.PNG',
         description: ''
       },
       {
         title: "Soccer Tournament",
         date: "2025-09-27",
-        image: '/images/soccertournament.PNG',
+        image: '/images/events/25-26/soccertournament.PNG',
         description: ''
       },
       {
         title: 'Jeopardy Night ',
         date: "2025-09-19",
-        image: '/images/JeopardyF25 .PNG',
+        image: '/images/events/25-26/JeopardyF25 .PNG',
         description: ''
       },
       {
         title: 'Spooky Bracelet Making ',
         date: "2025-10-29",
-        image: '/images/SpookyBracelet.PNG',
+        image: '/images/events/25-26/SpookyBracelet.PNG',
         description: ''
       },
       {
         title: "Dia de Muertos ",
         date: "2025-11-03",
-        image: '/images/Day of The Dead.PNG',
+        image: '/images/events/25-26/Day of The Dead.PNG',
         description: ''
       },
       {
         title: "S'mores Night ",
         date: "2026-01-20",
-        image: '/images/Smores Night.PNG',
+        image: '/images/events/25-26/Smores Night.PNG',
         description: ''
       },
       { 
         title: "Run w/ Jim(my)",
         date: "2025-10-25",
-        image: '/images/Run with Jim.png',
+        image: '/images/events/25-26/Run with Jim.png',
         description: ''
       },
       { 
         title: "Merry & Motivated",
         date: "2025-12-10",
-        image: '/images/MerryandMotiv.png',
+        image: '/images/events/25-26/MerryandMotiv.png',
         description: ''
       },
       { 
         title: "ERC After Dark",
         date: "2025-12-04",
-        image: '/images/ERCafterdark.png',
+        image: '/images/events/25-26/ERCafterdark.png',
         description: ''
       },
     ],
@@ -91,109 +91,109 @@ const Events = () => {
       {
         title: 'Field Day',
         date: "2024-08-31",
-        image: '/images/FieldDayFall24.png',
+        image: '/images/events/24-25/FieldDayFall24.png',
         description: ''
       },
       {
         title: 'Feliz Friday',
         date: "2024-08-30",
-        image: '/images/Feliz_Friday.jpg',
+        image: '/images/events/24-25/Feliz_Friday.jpg',
         description: ''
       },
       {
         title: "S'more night",
         date: "2024-09-05",
-        image: '/images/Smores_Night.jpg',
+        image: '/images/events/24-25/Smores_Night.jpg',
         description: ''
       },
       {
         title: "LAIC GBM #1",
         date: "2024-09-06",
-        image: '/images/GBM_1_24.png',
+        image: '/images/events/24-25/GBM_1_24.png',
         description: ''
       },
       { 
         title: "Volleyball Tournament",
         date: "2024-09-21",
-        image: '/images/Volleyball_24.png',
+        image: '/images/events/24-25/Volleyball_24.png',
         description: ''
       },
       { 
         title: "Baile Social",
         date: "2024-10-03",
-        image: '/images/Baile_Social.png',
+        image: '/images/events/24-25/Baile_Social.png',
         description: ''
       },
       { 
         title: "Hispanic Heritage Month Dinner",
         date: "2024-10-21",
-        image: '/images/Heritage_Dinner.png',
+        image: '/images/events/24-25/Heritage_Dinner.png',
         description: ''
       },
       { 
         title: "Merienda on the Lawn",
         date: "2024-10-21",
-        image: '/images/Merienda_24.png',
+        image: '/images/events/24-25/Merienda_24.png',
         description: ''
       },
       { 
         title: "Latinx Ball",
         date: "2024-11-16",
-        image: '/images/LatinxBall_24.png',
+        image: '/images/events/24-25/LatinxBall_24.png',
         description: ''
       },
      { 
         title: "Copa Latine",
         date: "2024-11-09",
-        image: '/images/Copa_24.png',
+        image: '/images/events/24-25/Copa_24.png',
         description: ''
       },
       { 
         title: "Pie an Exec",
         date: "2024-11-08",
-        image: '/images/Pie.png',
+        image: '/images/events/24-25/Pie.png',
         description: ''
       },
       { 
         title: "Día de los Muertos Pop Up",
         date: "2024-11-08",
-        image: '/images/DiaDeLosM.png',
+        image: '/images/events/24-25/DiaDeLosM.png',
         description: ''
       },
       { 
         title: "General Body Meeting Friendly Speed Dating",
         date: "2025-02-06",
-        image: '/images/SpeedDating.png',
+        image: '/images/events/24-25/SpeedDating.png',
         description: ''
       },
       { 
         title: "Music Jeopardy Night",
         date: "2025-03-31",
-        image: '/images/Jeopardy24.png',
+        image: '/images/events/24-25/Jeopardy24.png',
         description: ''
       },
       { 
         title: "Tote Bag & Bracelet Making",
         date: "2025-04-15",
-        image: '/images/ToteBag24.png',
+        image: '/images/events/24-25/ToteBag24.png',
         description: ''
       },
       { 
         title: "4th Year Farewell x Carne Asada",
         date: "2025-04-26",
-        image: '/images/Farewell25.png',
+        image: '/images/events/24-25/Farewell25.png',
         description: ''
       },
       { 
         title: "Agua Frescas & Horchata Fundraiser",
         date: "2025-04-14",
-        image: '/images/Agua.png',
+        image: '/images/events/24-25/Agua.png',
         description: ''
       },
       { 
         title: "Field Day",
         date: "2025-04-25",
-        image: '/images/FieldDaySpring25.png',
+        image: '/images/events/24-25/FieldDaySpring25.png',
         description: ''
       },
       

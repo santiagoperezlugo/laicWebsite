@@ -182,7 +182,7 @@ export default function About() {
   { src: '/images/community/picnic.JPEG', alt: 'LAIC community picnic on the Lawn' },
   { src: '/images/community/bracelets.jpg', alt: 'LAIC community event photo' },
   { src: '/images/community/cute_field.jpg', alt: 'LAIC community event photo' },
-  { src: '/images/community/food.jpg', alt: 'LAIC community event photo' },
+  { src: '/images/community/SmoresFriends.JPEG', alt: 'LAIC community event photo' },
   { src: '/images/community/girl_tugOW.jpg', alt: 'LAIC community event photo' },
   { src: '/images/community/hug.jpg', alt: 'LAIC community event photo' },
   { src: '/images/community/lsc_full.jpg', alt: 'LAIC community event photo' },
